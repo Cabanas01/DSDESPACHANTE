@@ -1,0 +1,24 @@
+# **App Name**: DS Cursos ONLINE
+
+## Core Features:
+
+- Hybrid Landing Page & E-commerce UI: Develop a professional, highly responsive, and conversion-focused UI combining a landing page funnel with e-commerce shop features, branded as 'DS Cursos ONLINE'. This includes all specified sections: Header, Hero, Authority Badges, an enhanced Course Catalog, How It Works, Social Proof, Benefits, Gallery, FAQ, Call to Action, and Footer, all designed for a premium, large-platform feel.
+- E-commerce Course Catalog with Conversion Triggers: Implement a dynamic, category-organized course catalog where each card displays course name, image, short description, prominently featured price, and action button ('Comprar agora' using "{{linkX}}" or 'Falar no WhatsApp' using "{{link_whatsapp}}"). Cards will also incorporate conversion triggers like 'Mais vendido', 'Oferta por tempo limitado', and 'Últimas vagas hoje', plus differentiators such as 'Certificado válido conforme legislação' below the price.
+- Omni-channel Conversion Paths: Integrate both direct WhatsApp contact ("{{link_whatsapp}}") and e-commerce-style 'Comprar agora' links ("{{linkX}}" for external purchase platforms) as primary CTAs throughout the site, offering visitors flexible conversion options within the funnel.
+- SEO and Performance Optimization: Leverage Next.js features for static generation, optimal page loading speed, and comprehensive SEO meta-tagging (title, description, Open Graph) to enhance search engine visibility and social media presence for the landing page.
+- AI-Powered Compliance and Conversion Copywriting Tool: Provide an AI-powered tool for administrators to generate and suggest highly persuasive, conversion-optimized headlines, subheadlines, and call-to-action texts. This tool will strictly enforce all compliance rules, proactively avoiding prohibited phrases (e.g., 'facilitar CNH', 'garantia de aprovação') and suggesting legally sound, trust-building alternatives (e.g., 'conforme legislação', 'curso regulamentado') for marketing content.
+- Smooth Micro-interactions and Animations: Integrate subtle hover effects, transition animations, and other micro-interactions on interactive elements (e.g., course cards, buttons) to enhance the modern aesthetic and user engagement without detracting from conversion goals.
+- Highlighted Popular Courses Section: Implement a dedicated 'Cursos mais procurados' section to prominently display top-selling courses (e.g., MOPP, Reciclagem, Transporte Escolar), increasing visibility and leveraging social proof within the e-commerce layout.
+- DS Trânsito Brand Integration: Seamlessly integrate the course platform with the main DS Despachante brand through a 'Site oficial' button linking to '{{link_site_principal}}', a dedicated footer message 'Integração com DS Despachante Guarujá', and contextual elements in the header using the 'DS Trânsito' or 'DS Despachante' name.
+- Authoritative Brand Positioning: Leverage the established reputation of DS Despachante by explicitly stating 'Plataforma de cursos da DS Despachante' and including statements like 'Empresa com experiência em documentação veicular' in the authority section to build trust and authority for the course offerings.
+
+## Style Guidelines:
+
+- Primary color: A sophisticated dark olive-brown (e.g., '#6B5B3E') for main structural elements and a professional base.
+- Content background: Clean white ('#FFFFFF') for content areas and course cards, ensuring readability.
+- Accent color: A vibrant yellow-orange (e.g., '#FFC107') for Call-to-Action buttons and key interactive elements, drawing user attention.
+- Text and deep elements: Dark black (e.g., '#1A1A1A') for main text, icons, and strong contrasting details.
+- 'Inter' (sans-serif) will be used throughout the site, offering a modern, clean, and highly legible aesthetic consistent with SaaS/fintech design principles and the established brand. Text will primarily be white on dark backgrounds and dark gray/black on light backgrounds.
+- Utilize clean, modern line-art style icons where necessary, complementing the premium and uncluttered visual design. The focus will remain on real images for course cards as specified, with icons serving supporting roles.
+- Adopt a mobile-first, responsive grid layout with clear visual hierarchy, generous whitespace, and organized, distinct content sections. This layout will seamlessly integrate landing page funnel elements with a structured e-commerce catalog featuring standardized course cards (image, title, description, prominent price, and action button), ensuring a professional and scalable online store appearance.
+- Implement subtle and elegant animations, particularly on hover states for interactive elements like cards and buttons, and for seamless page transitions to enhance the modern and polished user experience, aligning with the professional aesthetic.

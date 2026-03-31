@@ -4,9 +4,9 @@ import { Award, Briefcase, FileCheck, MapPin } from "lucide-react";
 export function Authority() {
   const stats = [
     { icon: Award, label: "Certificado Válido", sub: "Conforme legislação" },
-    { icon: Briefcase, label: "DS Despachante", sub: "Experiência de mercado" },
+    { icon: Briefcase, label: "DS Despachante", sub: "Tradição no Guarujá" },
     { icon: FileCheck, label: "100% Homologado", sub: "Cursos oficiais" },
-    { icon: MapPin, label: "Sede no Guarujá", sub: "Atendimento local" },
+    { icon: MapPin, label: "Baixada Santista", sub: "Atendimento nacional" },
   ];
 
   return (
@@ -27,7 +27,7 @@ export function Authority() {
         <div className="mt-12 p-8 rounded-2xl bg-white border border-border shadow-sm max-w-4xl mx-auto text-center">
           <p className="text-muted-foreground italic leading-relaxed">
             "{BRAND.NAME} é o braço educacional da <span className="font-semibold text-primary">{BRAND.PARENT}</span>. 
-            Nossa missão é facilitar o acesso à qualificação profissional de motoristas, unindo a tradição de uma empresa sólida com a tecnologia do ensino digital."
+            Com anos de experiência regularizando veículos e condutores no Guarujá, nossa missão é facilitar o acesso à qualificação profissional de motoristas, unindo a tradição de uma empresa sólida com a tecnologia do ensino digital."
           </p>
         </div>
       </div>

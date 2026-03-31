@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Premium highway at dusk with modern cars",
-      "imageUrl": "https://images.unsplash.com/photo-1542362567-b05503f3af15?auto=format&fit=crop&q=80&w=1920",
-      "imageHint": "highway traffic"
+      "description": "Premium highway with trucks and cars at dawn",
+      "imageUrl": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1920",
+      "imageHint": "highway trucks"
     },
     {
       "id": "mopp-course",

@@ -62,7 +62,7 @@ export function Hero() {
                     <Star key={i} className="w-3 h-3 fill-secondary text-secondary" />
                   ))}
                 </div>
-                <span className="text-xs font-bold text-white">+1.284 formados</span>
+                <span className="text-xs font-bold text-white">+ de 1.284 Alunos Formados</span>
               </div>
             </div>
           </div>

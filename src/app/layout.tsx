@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'DS Cursos ONLINE | Especialização e Reciclagem de Trânsito',
+  title: 'DS Cursos de Trânsito | Especialização e Reciclagem',
   description: 'Plataforma oficial de cursos da DS Despachante. Cursos de trânsito 100% online com certificado válido conforme a legislação.',
 };
 

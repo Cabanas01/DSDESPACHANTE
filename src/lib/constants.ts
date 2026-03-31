@@ -5,7 +5,7 @@ export const LINKS = {
 };
 
 export const BRAND = {
-  NAME: "DS Cursos ONLINE",
+  NAME: "DS Cursos de Trânsito",
   PARENT: "DS Despachante Guarujá",
-  DESCRIPTION: "Plataforma de cursos da DS Despachante. Empresa com experiência em documentação veicular.",
+  DESCRIPTION: "Plataforma oficial de cursos da DS Despachante. Cursos de trânsito 100% online com certificado válido conforme a legislação.",
 };

@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="relative w-10 h-10 overflow-hidden">
+              <div className="relative w-10 h-10 overflow-hidden shrink-0">
                 <Image 
                   src="/image/logo.png" 
                   alt="Logo DS" 

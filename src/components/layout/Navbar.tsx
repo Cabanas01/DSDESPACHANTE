@@ -15,7 +15,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 overflow-hidden">
+          <div className="relative w-12 h-12 overflow-hidden shrink-0">
             <Image 
               src="/image/logo.png" 
               alt="Logo DS" 

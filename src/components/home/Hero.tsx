@@ -21,7 +21,7 @@ export function Hero() {
           priority
           data-ai-hint="highway trucks"
         />
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10 text-white">
@@ -43,11 +43,17 @@ export function Hero() {
             <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 w-full sm:w-auto h-14 px-8 text-lg font-bold shadow-xl transition-all hover:scale-105 active:scale-95" asChild>
               <Link href="#cursos">Ver Cursos Agora <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
-            <div className="flex items-center gap-3 py-2 bg-black/20 backdrop-blur-sm rounded-full px-4">
+            <div className="flex items-center gap-3 py-2 bg-black/20 backdrop-blur-sm rounded-full px-4 border border-white/10">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-muted overflow-hidden">
-                    <img src={`https://picsum.photos/seed/${i + 100}/40/40`} alt="Aluno DS" />
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-muted overflow-hidden relative">
+                    <Image 
+                      src={`https://picsum.photos/seed/${i + 100}/40/40`} 
+                      alt="Aluno DS" 
+                      width={40}
+                      height={40}
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
@@ -57,7 +63,7 @@ export function Hero() {
                     <Star key={i} className="w-3 h-3 fill-secondary text-secondary" />
                   ))}
                 </div>
-                <span className="text-xs font-bold text-white">+12.000 Alunos Formados</span>
+                <span className="text-xs font-bold text-white">125.483 Alunos Formados</span>
               </div>
             </div>
           </div>

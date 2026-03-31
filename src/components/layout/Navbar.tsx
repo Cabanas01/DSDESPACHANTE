@@ -15,14 +15,14 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-12 h-12 overflow-hidden rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
+          <div className="relative w-12 h-12 overflow-hidden">
             <Image 
-              src="https://picsum.photos/seed/dslogo/100/100" 
+              src="/image/logo.png" 
               alt="Logo DS" 
               width={48} 
               height={48} 
-              className="object-cover"
-              data-ai-hint="driving school logo"
+              className="object-contain"
+              priority
             />
           </div>
           <div className="flex flex-col">

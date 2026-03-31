@@ -3,55 +3,55 @@
     {
       "id": "hero-bg",
       "description": "Premium highway with trucks and cars at dawn",
-      "imageUrl": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&q=80&w=1920",
+      "imageUrl": "/image/hero-bg.jpg",
       "imageHint": "highway trucks"
     },
     {
       "id": "mopp-course",
       "description": "Truck carrying dangerous goods",
-      "imageUrl": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/mopp-formacao.jpg",
       "imageHint": "truck transport"
     },
     {
       "id": "reciclagem-course",
       "description": "Driver in a car studying on a tablet",
-      "imageUrl": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/reciclagem.jpg",
       "imageHint": "driving car"
     },
     {
       "id": "transporte-escolar",
       "description": "Yellow school bus",
-      "imageUrl": "https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/escolar-formacao.jpg",
       "imageHint": "school bus"
     },
     {
       "id": "transporte-emergencia",
       "description": "Ambulance vehicle",
-      "imageUrl": "https://images.unsplash.com/photo-1587748891483-85f1c4c2f3eb?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/emergencia-formacao.jpg",
       "imageHint": "ambulance vehicle"
     },
     {
       "id": "passenger-transport",
       "description": "Modern bus interior",
-      "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/coletivo-formacao.jpg",
       "imageHint": "bus interior"
     },
     {
       "id": "indivisivel-transport",
       "description": "Special heavy load transport truck",
-      "imageUrl": "https://images.unsplash.com/photo-1586191582056-a15cd117d1bb?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/indivisivel-formacao.jpg",
       "imageHint": "heavy truck"
     },
     {
       "id": "nr-safety",
       "description": "Safety equipment and helmet",
-      "imageUrl": "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/nr-35.jpg",
       "imageHint": "safety helmet"
     },
     {
       "id": "defense-driving",
       "description": "Focus on car dashboard while driving safely",
-      "imageUrl": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800",
+      "imageUrl": "/image/direcao-defensiva.jpg",
       "imageHint": "safe driving"
     }
   ]

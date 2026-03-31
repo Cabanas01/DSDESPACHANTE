@@ -11,14 +11,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="relative w-10 h-10 overflow-hidden rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
+              <div className="relative w-10 h-10 overflow-hidden">
                 <Image 
-                  src="https://picsum.photos/seed/dslogo/100/100" 
+                  src="/image/logo.png" 
                   alt="Logo DS" 
                   width={40} 
                   height={40} 
-                  className="object-cover"
-                  data-ai-hint="driving school logo"
+                  className="object-contain"
                 />
               </div>
               <div className="flex flex-col">

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
 import Link from "next/link";
@@ -63,7 +62,7 @@ export function Hero() {
                     <Star key={i} className="w-3 h-3 fill-secondary text-secondary" />
                   ))}
                 </div>
-                <span className="text-xs font-bold text-white">125.483 Alunos Formados</span>
+                <span className="text-xs font-bold text-white">128.347 Alunos Formados</span>
               </div>
             </div>
           </div>

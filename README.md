@@ -25,6 +25,13 @@ git commit -m "descrição das alterações"
 git push origin main
 ```
 
+### Problemas com o Push? (Rejeitado)
+Se o Git disser que o push foi rejeitado (`rejected`), force a atualização com:
+
+```bash
+git push -f origin main
+```
+
 ## Tecnologias e Funcionalidades
 - **Next.js 15**: Performance e SEO de última geração.
 - **Tailwind CSS & ShadCN UI**: Interface moderna e responsiva.

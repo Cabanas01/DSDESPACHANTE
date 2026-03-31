@@ -119,7 +119,7 @@ export const COURSES: Course[] = [
     tags: ["Renovação"],
   },
 
-  // CURSOS LIVRES (ATUALIZAÇÃO)
+  // CURSOS LIVRES
   {
     id: "curso-livre-mopp",
     name: "CURSO LIVRE ATUALIZAÇÃO MOPP",

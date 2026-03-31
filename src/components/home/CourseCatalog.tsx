@@ -1,3 +1,4 @@
+
 "use client";
 
 import { COURSES, type Course } from "@/lib/courses";
@@ -7,6 +8,7 @@ import { LINKS } from "@/lib/constants";
 import { ShoppingCart, MessageCircle, Info } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 function CourseCard({ course }: { course: Course }) {
   return (
@@ -17,7 +19,7 @@ function CourseCard({ course }: { course: Course }) {
           alt={course.name} 
           fill 
           className="object-cover group-hover:scale-105 transition-transform duration-500"
-          data-ai-hint="course subject"
+          data-ai-hint="transport course"
         />
         <div className="absolute top-3 left-3 flex flex-wrap gap-2">
           {course.tags.map((tag) => (
@@ -64,13 +66,18 @@ function CourseCard({ course }: { course: Course }) {
 }
 
 export function CourseCatalog() {
-  const popularCourses = COURSES.filter(c => c.isPopular);
-  const otherCourses = COURSES.filter(c => !c.isPopular);
+  const [activeCategory, setActiveCategory] = useState<string>("Todos");
+  
+  const categories = ["Todos", ...Array.from(new Set(COURSES.map(c => c.category)))];
+  
+  const filteredCourses = activeCategory === "Todos" 
+    ? COURSES 
+    : COURSES.filter(c => c.category === activeCategory);
 
   return (
     <section id="cursos" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
             Catálogo de <span className="text-primary">Cursos Oficiais</span>
           </h2>
@@ -79,28 +86,25 @@ export function CourseCatalog() {
           </p>
         </div>
 
-        <div className="mb-20">
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-xl font-bold border-l-4 border-secondary pl-4">Cursos mais procurados</h3>
-            <div className="hidden sm:block h-px flex-1 bg-border mx-8" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {popularCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
+        {/* Categories Filter */}
+        <div className="flex flex-wrap gap-2 mb-12">
+          {categories.map((cat) => (
+            <Button 
+              key={cat} 
+              variant={activeCategory === cat ? "default" : "outline"}
+              onClick={() => setActiveCategory(cat)}
+              className="rounded-full text-xs font-bold uppercase tracking-wider"
+              size="sm"
+            >
+              {cat}
+            </Button>
+          ))}
         </div>
 
-        <div>
-          <div className="flex items-center justify-between mb-8">
-            <h3 className="text-xl font-bold border-l-4 border-primary pl-4">Outras Especializações</h3>
-            <div className="hidden sm:block h-px flex-1 bg-border mx-8" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {otherCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {filteredCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
         </div>
       </div>
     </section>

@@ -37,10 +37,22 @@
       "imageHint": "bus interior"
     },
     {
-      "id": "authority-badge-1",
-      "description": "Government official seal",
-      "imageUrl": "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=400",
-      "imageHint": "official seal"
+      "id": "indivisivel-transport",
+      "description": "Special heavy load transport truck",
+      "imageUrl": "https://images.unsplash.com/photo-1586191582056-a15cd117d1bb?auto=format&fit=crop&q=80&w=800",
+      "imageHint": "heavy truck"
+    },
+    {
+      "id": "nr-safety",
+      "description": "Safety equipment and helmet",
+      "imageUrl": "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=800",
+      "imageHint": "safety helmet"
+    },
+    {
+      "id": "defense-driving",
+      "description": "Focus on car dashboard while driving safely",
+      "imageUrl": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=800",
+      "imageHint": "safe driving"
     }
   ]
 }

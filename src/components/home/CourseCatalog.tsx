@@ -24,7 +24,7 @@ function CourseCard({ course }: { course: Course }) {
         <div className="absolute top-3 left-3 flex flex-wrap gap-2">
           {course.tags.map((tag) => (
             <Badge key={tag} className={`
-              ${tag.includes('Mais vendido') ? 'bg-secondary text-secondary-foreground' : 'bg-primary/80 text-white'}
+              ${tag.includes('Mais vendido') || tag.includes('popular') ? 'bg-secondary text-secondary-foreground' : 'bg-primary/80 text-white'}
               border-none text-[10px] font-bold uppercase tracking-wider
             `}>
               {tag}
@@ -50,7 +50,7 @@ function CourseCard({ course }: { course: Course }) {
 
         <div className="flex flex-col gap-2">
           <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-11" asChild>
-            <Link href={LINKS.EXTERNAL_PURCHASE} target="_blank">
+            <Link href={course.purchaseUrl} target="_blank">
               <ShoppingCart className="w-4 h-4 mr-2" /> Comprar Agora
             </Link>
           </Button>

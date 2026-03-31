@@ -1,4 +1,6 @@
+
 import Link from "next/link";
+import Image from "next/image";
 import { BRAND, LINKS } from "@/lib/constants";
 import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from "lucide-react";
 
@@ -8,13 +10,25 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 lg:col-span-1">
-            <Link href="/" className="flex flex-col mb-6">
-              <span className="text-2xl font-bold tracking-tight leading-none text-secondary">
-                {BRAND.NAME}
-              </span>
-              <span className="text-[10px] font-medium text-white/60 uppercase tracking-widest mt-0.5">
-                PLATAFORMA DS DESPACHANTE
-              </span>
+            <Link href="/" className="flex items-center gap-3 mb-6">
+              <div className="relative w-10 h-10 overflow-hidden rounded-lg bg-white/10 flex items-center justify-center border border-white/20">
+                <Image 
+                  src="https://picsum.photos/seed/dslogo/100/100" 
+                  alt="Logo DS" 
+                  width={40} 
+                  height={40} 
+                  className="object-cover"
+                  data-ai-hint="driving school logo"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-md font-black tracking-tighter text-secondary leading-none uppercase">
+                  CURSOS DE TRÂNSITO
+                </span>
+                <span className="text-[8px] font-bold text-white/60 uppercase tracking-widest mt-0.5">
+                  PLATAFORMA OFICIAL DS DESPACHANTE
+                </span>
+              </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Sua melhor opção para cursos de trânsito online. Qualidade, rapidez e total conformidade legal para motoristas profissionais, com o selo de confiança da DS Despachante Guarujá.

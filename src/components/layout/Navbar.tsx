@@ -1,6 +1,8 @@
+
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { LINKS, BRAND } from "@/lib/constants";
 import { MessageCircle, ExternalLink, Menu } from "lucide-react";
@@ -12,13 +14,25 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link href="/" className="flex flex-col">
-          <span className="text-xl font-bold tracking-tight text-primary leading-none">
-            {BRAND.NAME}
-          </span>
-          <span className="text-[10px] font-medium text-muted-foreground uppercase tracking-widest mt-0.5">
-            PLATAFORMA DS DESPACHANTE
-          </span>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-12 h-12 overflow-hidden rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
+            <Image 
+              src="https://picsum.photos/seed/dslogo/100/100" 
+              alt="Logo DS" 
+              width={48} 
+              height={48} 
+              className="object-cover"
+              data-ai-hint="driving school logo"
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-lg font-black tracking-tighter text-primary leading-none uppercase">
+              CURSOS DE TRÂNSITO
+            </span>
+            <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-0.5">
+              PLATAFORMA OFICIAL DS DESPACHANTE
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Menu */}

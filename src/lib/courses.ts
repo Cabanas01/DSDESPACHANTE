@@ -1,3 +1,4 @@
+
 export interface Course {
   id: string;
   name: string;
@@ -6,11 +7,10 @@ export interface Course {
   price: number;
   image: string;
   tags: string[];
-  purchaseUrl: string; // Link individual de compra
+  purchaseUrl: string;
   isPopular?: boolean;
 }
 
-// Para mudar o preço ou o link, basta alterar os campos 'price' e 'purchaseUrl' abaixo:
 export const COURSES: Course[] = [
   // FORMAÇÃO
   {
@@ -75,7 +75,7 @@ export const COURSES: Course[] = [
     description: "Renove seu curso de Movimentação de Produtos Perigosos de forma rápida e online.",
     price: 169.90,
     purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800",
     tags: ["Renovação"],
   },
   {
@@ -85,7 +85,7 @@ export const COURSES: Course[] = [
     description: "Atualize seus conhecimentos para continuar atuando no transporte escolar.",
     price: 169.90,
     purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
     tags: ["Renovação"],
   },
   {
@@ -95,70 +95,8 @@ export const COURSES: Course[] = [
     description: "Atualização obrigatória para motoristas de ônibus e transporte de passageiros.",
     price: 159.90,
     purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1459253331218-c4d77593e99d?auto=format&fit=crop&q=80&w=800",
     tags: ["Renovação"],
-  },
-  {
-    id: "emergencia-atualizacao",
-    name: "ATUALIZAÇÃO EMERGÊNCIA",
-    category: "Especialização (Atualização)",
-    description: "Mantenha sua certificação de condutor de veículos de emergência em dia.",
-    price: 169.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1587748891483-85f1c4c2f3eb?auto=format&fit=crop&q=80&w=800",
-    tags: ["Renovação"],
-  },
-  {
-    id: "indivisivel-atualizacao",
-    name: "ATUALIZAÇÃO CARGA INDIVISÍVEL",
-    category: "Especialização (Atualização)",
-    description: "Renovação da certificação para transporte de cargas especiais e indivisíveis.",
-    price: 179.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1586191582056-a15cd117d1bb?auto=format&fit=crop&q=80&w=800",
-    tags: ["Renovação"],
-  },
-
-  // CURSOS LIVRES ATUALIZAÇÃO
-  {
-    id: "livre-mopp-atualizacao",
-    name: "CURSO LIVRE ATUALIZAÇÃO MOPP",
-    category: "Cursos Livres",
-    description: "Conhecimento adicional focado na atualização de produtos perigosos.",
-    price: 149.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800",
-    tags: ["Conhecimento Livre"],
-  },
-  {
-    id: "livre-escolar-atualizacao",
-    name: "CURSO LIVRE ATUALIZAÇÃO ESCOLAR",
-    category: "Cursos Livres",
-    description: "Aprimoramento para condutores escolares em formato de curso livre.",
-    price: 149.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?auto=format&fit=crop&q=80&w=800",
-    tags: ["Conhecimento Livre"],
-  },
-  {
-    id: "livre-coletivo-atualizacao",
-    name: "CURSO LIVRE ATUALIZAÇÃO COLETIVO PASSAGEIROS",
-    category: "Cursos Livres",
-    description: "Aperfeiçoamento focado no transporte de passageiros.",
-    price: 149.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800",
-    tags: ["Conhecimento Livre"],
-  },
-  {
-    id: "livre-indivisivel-atualizacao",
-    name: "CURSO LIVRE ATUALIZAÇÃO CARGA INDIVISÍVEL",
-    category: "Cursos Livres",
-    description: "Capacitação adicional para cargas de grandes dimensões.",
-    price: 149.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1586191582056-a15cd117d1bb?auto=format&fit=crop&q=80&w=800",
-    tags: ["Conhecimento Livre"],
   },
 
   // TREINAMENTOS E NRS
@@ -173,115 +111,13 @@ export const COURSES: Course[] = [
     tags: ["Segurança"],
   },
   {
-    id: "direcao-defensiva-primeiros-socorros",
-    name: "DIREÇÃO DEFENSIVA E PRIMEIROS SOCORROS",
-    category: "Treinamento Profissional",
-    description: "Combo essencial para segurança no trânsito e atendimento básico de emergência.",
-    price: 149.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=800",
-    tags: ["Combo"],
-  },
-  {
-    id: "direcao-economica",
-    name: "Direção Econômica",
-    category: "Treinamento Profissional",
-    description: "Técnicas de condução para reduzir o consumo de combustível e desgaste do veículo.",
-    price: 89.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1586191582056-a15cd117d1bb?auto=format&fit=crop&q=80&w=800",
-    tags: ["Economia"],
-  },
-  {
-    id: "legislacao-motorista",
-    name: "Legislação Motorista Profissional",
-    category: "Treinamento Profissional",
-    description: "Tudo o que você precisa saber sobre as leis que regem a profissão de motorista.",
-    price: 99.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=800",
-    tags: ["Jurídico"],
-  },
-  {
-    id: "monitor-escolar",
-    name: "MONITOR ESCOLAR",
-    category: "Treinamento Profissional",
-    description: "Capacitação para acompanhantes de transporte escolar, focada no cuidado com os alunos.",
-    price: 179.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1556691421-cf15fe27a0b6?auto=format&fit=crop&q=80&w=800",
-    tags: ["Escolar"],
-  },
-  {
-    id: "primeiros-socorros",
-    name: "PRIMEIROS SOCORROS",
-    category: "Treinamento Profissional",
-    description: "Conhecimentos básicos fundamentais para agir em situações críticas.",
-    price: 79.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=800",
-    tags: ["Emergência"],
-  },
-  {
-    id: "qualificacao-observadores",
-    name: "Qualificação de Observadores",
-    category: "Treinamento Profissional",
-    description: "Formação para profissionais que atuam na monitoria e observação de campo.",
-    price: 199.90,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&q=80&w=800",
-    tags: ["Gestão"],
-  },
-
-  // NRs
-  {
-    id: "nr-06",
-    name: "NR-06",
-    category: "Normas Regulamentadoras",
-    description: "Equipamento de Proteção Individual (EPI). Segurança garantida no ambiente de trabalho.",
-    price: 99.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=800",
-    tags: ["Segurança do Trabalho"],
-  },
-  {
-    id: "nr-11",
-    name: "NR-11",
-    category: "Normas Regulamentadoras",
-    description: "Transporte, Movimentação, Armazenagem e Manuseio de Materiais.",
-    price: 149.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1586191582056-a15cd117d1bb?auto=format&fit=crop&q=80&w=800",
-    tags: ["Segurança do Trabalho"],
-  },
-  {
-    id: "nr-16",
-    name: "NR-16",
-    category: "Normas Regulamentadoras",
-    description: "Atividades e Operações Perigosas. Segurança em ambientes de alto risco.",
-    price: 149.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800",
-    tags: ["Segurança do Trabalho"],
-  },
-  {
-    id: "nr-20",
-    name: "NR-20",
-    category: "Normas Regulamentadoras",
-    description: "Segurança e Saúde no Trabalho com Inflamáveis e Combustíveis.",
-    price: 159.00,
-    purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800",
-    tags: ["Segurança do Trabalho"],
-  },
-  {
     id: "nr-35",
-    name: "NR-35",
+    name: "NR-35 - Trabalho em Altura",
     category: "Normas Regulamentadoras",
-    description: "Trabalho em Altura. Treinamento para prevenção de quedas e acidentes.",
+    description: "Treinamento obrigatório para profissionais que realizam atividades acima de 2 metros.",
     price: 149.00,
     purchaseUrl: "https://pay.hotmart.com/ID_AQUI",
-    image: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1508350181261-0062400e9391?auto=format&fit=crop&q=80&w=800",
     tags: ["Segurança do Trabalho"],
   },
 ];

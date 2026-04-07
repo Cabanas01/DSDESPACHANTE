@@ -24,6 +24,45 @@ export interface Course {
 }
 
 export const COURSES: Course[] = [
+  // APH - NOVO
+  {
+    id: "aph-formacao",
+    name: "CURSO DE ATENDIMENTO PRÉ-HOSPITALAR (APH) - FORMAÇÃO",
+    category: "Especialização (Formação)",
+    description: "Formação essencial para quem deseja atuar no atendimento inicial a vítimas em situações de urgência e emergência.",
+    longDescription: "O Curso de APH é uma formação essencial para quem deseja atuar no atendimento inicial a vítimas em situações de urgência e emergência, garantindo suporte rápido e eficiente até a chegada ao hospital. Com aulas 100% online, o curso oferece flexibilidade para estudar no seu ritmo, preparando você para agir com técnica, segurança e responsabilidade em momentos decisivos.",
+    price: 190.00,
+    purchaseUrl: "https://ead-checkout.bludata.net/?p=2c2c4ad1-0783-42f6-92dc-6adb324b9bb8", // Usando emergência como base/placeholder
+    whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20de%20Atendimento%20Pr%C3%A9-Hospitalar%20(APH)%20Forma%C3%A7%C3%A3o",
+    image: "/image/aph.jpg",
+    tags: ["Novo", "Saúde"],
+    hours: "50 horas/aula",
+    minDays: "7 dias",
+    requirements: [
+      "Ter no mínimo 18 anos",
+      "Ter interesse ou atuar na área de saúde, resgate ou atendimento emergencial",
+      "Possuir disponibilidade para realizar o curso 100% online",
+      "Estar ciente das exigências legais para atuação em atendimento pré-hospitalar"
+    ],
+    modules: [
+      { title: "Módulo 1 – Direção defensiva", hours: "12h", description: "Técnicas para garantir a segurança no trânsito ao se deslocar para atendimentos emergenciais." },
+      { title: "Módulo 2 – Legislação e Normas", hours: "13h", description: "Conheça detalhadamente as normas que regem o atendimento pré-hospitalar e as responsabilidades." },
+      { title: "Módulo 3 – Relacionamento Interpessoal", hours: "10h", description: "Aprenda a se comunicar com clareza e empatia em situações de emergência." },
+      { title: "Módulo 4 – Primeiros Socorros e Meio Ambiente", hours: "15h", description: "Procedimentos para agir em emergências e garantir o respeito no local de atendimento." }
+    ]
+  },
+  {
+    id: "aph-atualizacao",
+    name: "CURSO DE ATENDIMENTO PRÉ-HOSPITALAR (APH) - ATUALIZAÇÃO",
+    category: "Especialização (Atualização)",
+    description: "Renove seus conhecimentos em APH para continuar atuando com excelência no suporte básico de vida.",
+    price: 100.00,
+    purchaseUrl: "https://ead-checkout.bludata.net/?p=c603e074-b610-46d6-ae2a-f7c4f29a1b37",
+    whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pela%20atualiza%C3%A7%C3%A3o%20do%20curso%20de%20Atendimento%20Pr%C3%A9-Hospitalar%20(APH)",
+    image: "/image/aph.jpg",
+    tags: ["Renovação"],
+    hours: "16 horas/aula",
+  },
   // FORMAÇÃO
   {
     id: "mopp-formacao",

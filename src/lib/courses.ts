@@ -55,7 +55,7 @@ export const COURSES: Course[] = [
     id: "aph-atualizacao",
     name: "CURSO DE ATENDIMENTO PRÉ-HOSPITALAR (APH) - ATUALIZAÇÃO",
     category: "Especialização (Atualização)",
-    description: "Renove seus conhecimentos em APH para continuar atuando com excelência no suporte básico de vida.",
+    description: "Renove seus conhecimentos em APH para continuar atuando com excellence no suporte básico de vida.",
     price: 100.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=c603e074-b610-46d6-ae2a-f7c4f29a1b37",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pela%20atualiza%C3%A7%C3%A3o%20do%20curso%20de%20Atendimento%20Pr%C3%A9-Hospitalar%20(APH)",

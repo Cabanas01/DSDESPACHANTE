@@ -1,15 +1,26 @@
 
+export interface CourseModule {
+  title: string;
+  hours: string;
+  description: string;
+}
+
 export interface Course {
   id: string;
   name: string;
   category: string;
   description: string;
+  longDescription?: string;
   price: number;
   image: string;
   tags: string[];
   purchaseUrl: string;
-  whatsappUrl?: string;
+  whatsappUrl: string;
   isPopular?: boolean;
+  hours?: string;
+  minDays?: string;
+  requirements?: string[];
+  modules?: CourseModule[];
 }
 
 export const COURSES: Course[] = [
@@ -19,24 +30,48 @@ export const COURSES: Course[] = [
     name: "CURSO PARA CONDUTORES DE TRANSPORTE DE PRODUTOS PERIGOSOS (MOPP)",
     category: "Especialização (Formação)",
     description: "Formação essencial para motoristas que transportam cargas químicas e inflamáveis.",
+    longDescription: "O curso destina-se a motoristas que desejam se profissionalizar e exercer a atividade remunerada de transporte de produtos ou resíduos perigosos. O curso de Cargas Perigosas (MOPP) é especialmente desenvolvido para capacitar todos aqueles que buscam ingressar ou aprimorar sua atuação em atividades remuneradas no transporte, visando agir com responsabilidade e segurança.",
     price: 190.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=a51412f4-114a-4274-ada6-b04b83d6e0a1",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20para%20condutores%20de%20transporte%20de%20produtos%20perigosos",
     image: "/image/mopp-formacao.jpg",
     tags: ["Mais vendido", "Oficial"],
     isPopular: true,
+    hours: "50 horas/aula",
+    minDays: "7 dias",
+    requirements: [
+      "Ser maior de 21 anos",
+      "Estar habilitado em uma das categorias “B”, “C”, “D” ou “E”",
+      "Possuir CNH válida (não estar suspenso ou cassado)"
+    ],
+    modules: [
+      { title: "Legislação de Trânsito", hours: "10h", description: "CTB, sinalização, infrações e normas específicas de transporte." },
+      { title: "Direção Defensiva", hours: "15h", description: "Prevenção de acidentes e comportamento seguro na condução especializada." },
+      { title: "Primeiros Socorros e Meio Ambiente", hours: "10h", description: "Providências em acidentes e normas do CONAMA sobre poluição." },
+      { title: "Movimentação de Produtos Perigosos", hours: "15h", description: "Classificação, simbologia e reações químicas dos produtos." }
+    ]
   },
   {
     id: "escolar-formacao",
     name: "CURSO PARA CONDUTORES DE TRANSPORTE ESCOLAR",
     category: "Especialização (Formação)",
     description: "Capacite-se para o transporte de crianças e adolescentes com total segurança.",
+    longDescription: "Este curso habilita o condutor a realizar o transporte de escolares conforme as exigências do CTB, focando na segurança dos passageiros e na ética profissional necessária para lidar com o público infantil.",
     price: 190.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=3760e237-5f3c-4589-9f07-846e59632c31",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20para%20condutores%20de%20transporte%20escolar",
     image: "/image/escolar-formacao.jpg",
     tags: ["Mais procurado"],
     isPopular: true,
+    hours: "50 horas/aula",
+    minDays: "7 dias",
+    requirements: ["Ser maior de 21 anos", "Habilitado na categoria D", "CNH válida"],
+    modules: [
+      { title: "Legislação de Trânsito", hours: "10h", description: "Normas específicas para o transporte escolar." },
+      { title: "Direção Defensiva", hours: "15h", description: "Técnicas de segurança aplicada ao transporte de pessoas." },
+      { title: "Primeiros Socorros", hours: "10h", description: "Atendimento emergencial focado no público escolar." },
+      { title: "Relações Interpessoais", hours: "15h", description: "Trato com alunos, pais e responsáveis." }
+    ]
   },
   {
     id: "coletivo-formacao",
@@ -48,7 +83,8 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20coletivo%20de%20passageiros",
     image: "/image/coletivo-formacao.jpg",
     tags: ["Essencial"],
-    isPopular: true,
+    hours: "50 horas/aula",
+    minDays: "7 dias",
   },
   {
     id: "emergencia-formacao",
@@ -60,6 +96,8 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20para%20condutores%20de%20ve%C3%ADculos%20de%20emerg%C3%AAncia",
     image: "/image/emergencia-formacao.jpg",
     tags: ["Certificado Válido"],
+    hours: "50 horas/aula",
+    minDays: "7 dias",
   },
   {
     id: "indivisivel-formacao",
@@ -71,6 +109,8 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20para%20condutores%20de%20transporte%20de%20cargas%20indivis%C3%ADveis",
     image: "/image/indivisivel-formacao.jpg",
     tags: ["Carga Especial"],
+    hours: "50 horas/aula",
+    minDays: "7 dias",
   },
 
   // ATUALIZAÇÃO
@@ -84,6 +124,7 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pela%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20de%20produtos%20perigosos",
     image: "/image/mopp-atualizacao.jpg",
     tags: ["Renovação"],
+    hours: "16 horas/aula",
   },
   {
     id: "escolar-atualizacao",
@@ -95,6 +136,7 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pela%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20de%20escolares",
     image: "/image/escolar-atualizacao.jpg",
     tags: ["Renovação"],
+    hours: "16 horas/aula",
   },
   {
     id: "coletivo-atualizacao",
@@ -106,6 +148,7 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pela%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20coletivo%20de%20passageiros",
     image: "/image/coletivo-atualizacao.jpg",
     tags: ["Renovação"],
+    hours: "16 horas/aula",
   },
   {
     id: "emergencia-atualizacao",
@@ -117,6 +160,7 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pela%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20de%20emerg%C3%AAncia",
     image: "/image/emergencia-atualizacao.jpg",
     tags: ["Renovação"],
+    hours: "16 horas/aula",
   },
   {
     id: "indivisivel-atualizacao",
@@ -128,6 +172,7 @@ export const COURSES: Course[] = [
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pela%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20transporte%20de%20cargas%20indivis%C3%ADveis",
     image: "/image/indivisivel-atualizacao.jpg",
     tags: ["Renovação"],
+    hours: "16 horas/aula",
   },
 
   // CURSOS LIVRES
@@ -139,7 +184,7 @@ export const COURSES: Course[] = [
     price: 45.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=add43add-d230-43f5-b5fa-852954a331bc",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20livre%20de%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20de%20produtos%20perigosos",
-    image: "/image/curso-livre-mopp.jpg",
+    image: "/image/mopp-atualizacao.jpg",
     tags: ["Conhecimento"],
   },
   {
@@ -150,7 +195,7 @@ export const COURSES: Course[] = [
     price: 45.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=9c545b70-69de-46c6-a75d-7362823595c7",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20livre%20de%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20de%20escolares",
-    image: "/image/curso-livre-escolar.jpg",
+    image: "/image/escolar-atualizacao.jpg",
     tags: ["Conhecimento"],
   },
   {
@@ -161,7 +206,7 @@ export const COURSES: Course[] = [
     price: 45.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=2e4b0e2a-536f-46e1-aa53-4e9d12838221",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20livre%20de%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20ve%C3%ADculo%20de%20transporte%20coletivo%20de%20passageiros",
-    image: "/image/curso-livre-coletivo.jpg",
+    image: "/image/coletivo-atualizacao.jpg",
     tags: ["Conhecimento"],
   },
   {
@@ -172,7 +217,7 @@ export const COURSES: Course[] = [
     price: 45.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=9f093f83-7367-4e13-ac35-66d1d92fa93c",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20livre%20de%20atualiza%C3%A7%C3%A3o%20para%20condutores%20de%20transporte%20de%20cargas%20indivis%C3%ADveis",
-    image: "/image/curso-livre-indivisivel.jpg",
+    image: "/image/indivisivel-atualizacao.jpg",
     tags: ["Conhecimento"],
   },
 

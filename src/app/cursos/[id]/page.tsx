@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle2, Clock, ShieldCheck, GraduationCap, ArrowLeft, MessageCircle, ShoppingCart } from "lucide-react";
+import { CheckCircle2, Clock, ShieldCheck, GraduationCap, ArrowLeft, MessageCircle, ShoppingCart, Info, Award, UserCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { LINKS } from "@/lib/constants";
@@ -27,6 +27,17 @@ export default function CoursePage() {
       </div>
     );
   }
+
+  const advantages = [
+    "Integrado com o DETRAN",
+    "Válido em todo território nacional",
+    "Prático e fácil, conclua em poucos dias",
+    "Formato 100% Digital (EAD)",
+    "Certificado oficial incluso",
+    "Estude pelo celular, tablet ou PC",
+    "Suporte ao aluno dedicado",
+    "Conteúdo disponível 24h por dia"
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -56,7 +67,7 @@ export default function CoursePage() {
                   {course.name}
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8 max-w-xl">
-                  {course.description}
+                  {course.longDescription || course.description}
                 </p>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-10">
@@ -65,8 +76,8 @@ export default function CoursePage() {
                       <Clock className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground">Formato</p>
-                      <p className="text-sm font-bold">100% Online</p>
+                      <p className="text-xs text-muted-foreground">Carga Horária</p>
+                      <p className="text-sm font-bold">{course.hours || "Consultar"}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -83,8 +94,8 @@ export default function CoursePage() {
                       <GraduationCap className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground">Certificado</p>
-                      <p className="text-sm font-bold">Válido Nacional</p>
+                      <p className="text-xs text-muted-foreground">Prazo Mínimo</p>
+                      <p className="text-sm font-bold">{course.minDays || "Imediato"}</p>
                     </div>
                   </div>
                 </div>
@@ -96,7 +107,7 @@ export default function CoursePage() {
                     </Link>
                   </Button>
                   <Button variant="outline" size="lg" className="border-primary text-primary h-14 px-8 text-lg font-bold" asChild>
-                    <Link href={course.whatsappUrl || LINKS.WHATSAPP} target="_blank">
+                    <Link href={course.whatsappUrl} target="_blank">
                       <MessageCircle className="w-5 h-5 mr-2 text-[#25D366]" /> Tirar Dúvidas
                     </Link>
                   </Button>
@@ -127,8 +138,8 @@ export default function CoursePage() {
                   <TabsTrigger value="curriculo" className="data-[state=active]:border-b-2 data-[state=active]:border-primary data-[state=active]:text-primary rounded-none border-b-2 border-transparent px-8 h-12 font-bold bg-transparent">
                     Currículo
                   </TabsTrigger>
-                  <TabsTrigger value="faq" className="data-[state=active]:border-b-2 data-[state=active]:border-primary data-[state=active]:text-primary rounded-none border-b-2 border-transparent px-8 h-12 font-bold bg-transparent">
-                    Dúvidas
+                  <TabsTrigger value="requisitos" className="data-[state=active]:border-b-2 data-[state=active]:border-primary data-[state=active]:text-primary rounded-none border-b-2 border-transparent px-8 h-12 font-bold bg-transparent">
+                    Requisitos
                   </TabsTrigger>
                 </TabsList>
                 
@@ -136,24 +147,16 @@ export default function CoursePage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="space-y-8">
                       <div>
-                        <h3 className="text-2xl font-bold mb-4">Sobre o Curso</h3>
+                        <h3 className="text-2xl font-bold mb-4 flex items-center gap-2"><Info className="w-6 h-6 text-primary" /> Sobre o Curso</h3>
                         <p className="text-muted-foreground leading-relaxed">
-                          Este curso é destinado a profissionais que buscam {course.name.toLowerCase()}. 
-                          Nossa plataforma oferece um ambiente de aprendizado moderno, com videoaulas dinâmicas e material de apoio completo, 
-                          garantindo que você obtenha sua certificação de forma rápida e segura, respeitando todos os requisitos legais do CONTRAN e DETRAN.
+                          {course.longDescription || `Este curso é destinado a profissionais que buscam ${course.name.toLowerCase()}. Nossa plataforma oferece um ambiente de aprendizado moderno, com videoaulas dinâmicas e material de apoio completo.`}
                         </p>
                       </div>
                       
                       <div>
-                        <h3 className="text-2xl font-bold mb-4">O que você vai aprender</h3>
+                        <h3 className="text-2xl font-bold mb-4 flex items-center gap-2"><Award className="w-6 h-6 text-primary" /> Vantagens DS Cursos</h3>
                         <ul className="space-y-3">
-                          {[
-                            "Legislação específica atualizada",
-                            "Direção Defensiva avançada",
-                            "Primeiros socorros e emergências",
-                            "Ética e cidadania no trânsito",
-                            "Noções básicas de mecânica e segurança"
-                          ].map((item, idx) => (
+                          {advantages.map((item, idx) => (
                             <li key={idx} className="flex gap-3 items-start">
                               <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                               <span className="font-medium">{item}</span>
@@ -169,21 +172,14 @@ export default function CoursePage() {
                           <h3 className="text-xl font-bold mb-6">Investimento</h3>
                           <div className="mb-6">
                             <span className="text-4xl font-black text-primary">R$ {course.price.toFixed(2).replace('.', ',')}</span>
-                            <p className="text-sm text-muted-foreground mt-2 italic">Preço promocional à vista no PIX ou parcelado no cartão.</p>
+                            <p className="text-sm text-muted-foreground mt-2 italic">Preço oficial homologado.</p>
                           </div>
-                          <ul className="space-y-4 mb-8">
-                            <li className="flex items-center gap-2 text-sm">
-                              <CheckCircle2 className="w-4 h-4 text-green-500" /> Acesso imediato após confirmação
-                            </li>
-                            <li className="flex items-center gap-2 text-sm">
-                              <CheckCircle2 className="w-4 h-4 text-green-500" /> Suporte técnico via WhatsApp
-                            </li>
-                            <li className="flex items-center gap-2 text-sm">
-                              <CheckCircle2 className="w-4 h-4 text-green-500" /> Certificado incluso sem taxas extras
-                            </li>
-                          </ul>
-                          <Button className="w-full bg-primary text-white font-bold h-12" asChild>
-                            <Link href={course.purchaseUrl}>INICIAR INSCRIÇÃO</Link>
+                          <div className="p-4 bg-white rounded-lg border border-border mb-8">
+                            <h4 className="font-bold text-sm mb-2 flex items-center gap-2"><Award className="w-4 h-4 text-secondary" /> Certificado Incluso</h4>
+                            <p className="text-xs text-muted-foreground">Digital e autenticado, válido em todo o território nacional.</p>
+                          </div>
+                          <Button className="w-full bg-primary text-white font-bold h-12 text-lg" asChild>
+                            <Link href={course.purchaseUrl}>GARANTIR MINHA VAGA</Link>
                           </Button>
                         </CardContent>
                       </Card>
@@ -193,34 +189,56 @@ export default function CoursePage() {
                 
                 <TabsContent value="curriculo" className="animate-in fade-in slide-in-from-bottom-2 duration-500">
                   <div className="space-y-6">
-                    <div className="p-6 border rounded-xl bg-muted/10">
-                      <h4 className="font-bold text-lg mb-2">Módulo 01: Introdução e Legislação</h4>
-                      <p className="text-sm text-muted-foreground">Base legal, direitos e deveres do condutor especializado conforme as novas resoluções.</p>
-                    </div>
-                    <div className="p-6 border rounded-xl bg-muted/10">
-                      <h4 className="font-bold text-lg mb-2">Módulo 02: Segurança e Prevenção</h4>
-                      <p className="text-sm text-muted-foreground">Técnicas de direção preventiva aplicadas especificamente para {course.name.toLowerCase()}.</p>
-                    </div>
-                    <div className="p-6 border rounded-xl bg-muted/10">
-                      <h4 className="font-bold text-lg mb-2">Módulo 03: Primeiros Socorros</h4>
-                      <p className="text-sm text-muted-foreground">Protocolos de atendimento inicial em situações de acidente ou emergência.</p>
-                    </div>
-                    <div className="p-6 border rounded-xl bg-muted/10">
-                      <h4 className="font-bold text-lg mb-2">Módulo 04: Avaliação Final</h4>
-                      <p className="text-sm text-muted-foreground">Teste de conhecimentos para emissão da certificação homologada.</p>
-                    </div>
+                    {course.modules ? (
+                      course.modules.map((module, idx) => (
+                        <div key={idx} className="p-6 border rounded-xl bg-muted/10 group hover:bg-white hover:shadow-md transition-all">
+                          <div className="flex justify-between items-start mb-2">
+                            <h4 className="font-bold text-lg">{module.title}</h4>
+                            <Badge variant="outline">{module.hours}</Badge>
+                          </div>
+                          <p className="text-sm text-muted-foreground">{module.description}</p>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="text-center py-10 text-muted-foreground">
+                        Currículo detalhado disponível sob consulta. O curso cobre todos os tópicos exigidos pela legislação vigente.
+                      </div>
+                    )}
                   </div>
                 </TabsContent>
                 
-                <TabsContent value="faq" className="animate-in fade-in slide-in-from-bottom-2 duration-500">
-                  <div className="space-y-6">
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">Como o certificado é validado no sistema?</h4>
-                      <p className="text-muted-foreground">Nossa plataforma é integrada e homologada. Após a conclusão, seus dados são processados e a informação de curso concluído é transmitida para a base nacional.</p>
+                <TabsContent value="requisitos" className="animate-in fade-in slide-in-from-bottom-2 duration-500">
+                  <div className="space-y-8">
+                    <div className="p-6 border rounded-xl bg-primary/5">
+                      <h3 className="text-xl font-bold mb-6 flex items-center gap-2"><UserCheck className="w-6 h-6 text-primary" /> Pré-requisitos para este curso</h3>
+                      <ul className="space-y-4">
+                        {course.requirements ? (
+                          course.requirements.map((req, idx) => (
+                            <li key={idx} className="flex gap-3 items-center">
+                              <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
+                              <span className="font-medium text-muted-foreground">{req}</span>
+                            </li>
+                          ))
+                        ) : (
+                          <>
+                            <li className="flex gap-3 items-center">
+                              <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
+                              <span className="font-medium text-muted-foreground">Possuir CNH válida na categoria exigida</span>
+                            </li>
+                            <li className="flex gap-3 items-center">
+                              <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
+                              <span className="font-medium text-muted-foreground">Não estar cumprindo suspensão ou cassação</span>
+                            </li>
+                          </>
+                        )}
+                      </ul>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-lg mb-2">Qual o prazo para concluir as aulas?</h4>
-                      <p className="text-muted-foreground">Você tem total liberdade. O curso fica disponível por tempo suficiente para que você conclua no seu ritmo, respeitando a carga horária mínima exigida pela lei.</p>
+                    
+                    <div className="p-6 bg-secondary/10 rounded-xl border-2 border-dashed border-secondary/30">
+                      <h4 className="font-black text-secondary-foreground mb-2">Atenção!</h4>
+                      <p className="text-sm text-muted-foreground italic">
+                        O não cumprimento dos pré-requisitos pode invalidar a homologação do curso junto ao órgão de trânsito. Em caso de dúvida, consulte nosso suporte.
+                      </p>
                     </div>
                   </div>
                 </TabsContent>

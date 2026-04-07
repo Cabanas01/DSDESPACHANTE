@@ -5,7 +5,7 @@ import { COURSES, type Course } from "@/lib/courses";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
-import { ShoppingCart, MessageCircle, Info } from "lucide-react";
+import { ExternalLink, MessageCircle, Info, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -14,12 +14,14 @@ function CourseCard({ course }: { course: Course }) {
   return (
     <div className="group bg-white rounded-2xl border border-border overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full">
       <div className="relative h-48 w-full overflow-hidden">
-        <Image 
-          src={course.image} 
-          alt={course.name} 
-          fill 
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+        <Link href={`/cursos/${course.id}`}>
+          <Image 
+            src={course.image} 
+            alt={course.name} 
+            fill 
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </Link>
         <div className="absolute top-3 left-3 flex flex-wrap gap-2">
           {course.tags.map((tag) => (
             <Badge key={tag} className={`
@@ -34,7 +36,9 @@ function CourseCard({ course }: { course: Course }) {
       
       <div className="p-5 md:p-6 flex flex-col flex-1">
         <span className="text-[10px] font-bold text-primary uppercase tracking-widest mb-1">{course.category}</span>
-        <h3 className="text-lg md:text-xl font-bold mb-3 line-clamp-2 leading-tight group-hover:text-primary transition-colors">{course.name}</h3>
+        <Link href={`/cursos/${course.id}`}>
+          <h3 className="text-lg md:text-xl font-bold mb-3 line-clamp-2 leading-tight group-hover:text-primary transition-colors">{course.name}</h3>
+        </Link>
         <p className="text-sm text-muted-foreground mb-6 line-clamp-2 flex-1">{course.description}</p>
         
         <div className="mb-6 pt-4 border-t border-border/50">
@@ -42,18 +46,15 @@ function CourseCard({ course }: { course: Course }) {
             <span className="text-xs font-medium text-muted-foreground">Por apenas</span>
             <span className="text-2xl font-black text-foreground">R$ {course.price.toFixed(2).replace('.', ',')}</span>
           </div>
-          <p className="text-[10px] font-bold text-primary mt-1 flex items-center gap-1 uppercase tracking-tighter">
-            <Info className="w-3 h-3" /> Certificado válido nacionalmente
-          </p>
         </div>
 
         <div className="flex flex-col gap-2">
           <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold h-11" asChild>
-            <Link href={course.purchaseUrl} target="_blank">
-              <ShoppingCart className="w-4 h-4 mr-2" /> Comprar Agora
+            <Link href={`/cursos/${course.id}`}>
+              Ver Detalhes e Inscrição
             </Link>
           </Button>
-          <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary/5 h-11 font-semibold" asChild>
+          <Button variant="outline" className="w-full border-primary/20 text-muted-foreground hover:bg-primary/5 hover:text-primary h-11 font-semibold" asChild>
             <Link href={course.whatsappUrl || LINKS.WHATSAPP} target="_blank">
               <MessageCircle className="w-4 h-4 mr-2 text-[#25D366]" /> WhatsApp
             </Link>
@@ -67,11 +68,11 @@ function CourseCard({ course }: { course: Course }) {
 export function CourseCatalog() {
   const [activeCategory, setActiveCategory] = useState<string>("Todos");
   
-  const categories = ["Todos", ...Array.from(new Set(COURSES.map(c => c.category)))];
+  const categories = ["Todos", "Formação", "Atualização", "Cursos Livres", "Treinamento Profissional", "Normas Regulamentadoras", "Reciclagem e Outros"];
   
   const filteredCourses = activeCategory === "Todos" 
     ? COURSES 
-    : COURSES.filter(c => c.category === activeCategory);
+    : COURSES.filter(c => c.category.includes(activeCategory));
 
   return (
     <section id="cursos" className="py-20 md:py-24 bg-white">

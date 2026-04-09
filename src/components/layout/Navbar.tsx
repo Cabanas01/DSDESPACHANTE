@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -27,10 +26,10 @@ export function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="text-[12px] md:text-lg font-black tracking-tighter text-primary leading-none uppercase">
+            <span className="text-[10px] md:text-sm font-black tracking-tighter text-primary leading-none uppercase">
               CURSOS DE TRÂNSITO
             </span>
-            <span className="text-[7px] md:text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-1">
+            <span className="text-[6px] md:text-[8px] font-bold text-muted-foreground uppercase tracking-widest mt-0.5">
               PLATAFORMA OFICIAL DS DESPACHANTE
             </span>
           </div>

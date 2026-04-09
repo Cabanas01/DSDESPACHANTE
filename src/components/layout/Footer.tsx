@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import Image from "next/image";
 import { BRAND, LINKS } from "@/lib/constants";
@@ -22,10 +21,10 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-black tracking-tighter text-secondary leading-none uppercase">
+                <span className="text-[10px] font-black tracking-tighter text-secondary leading-none uppercase">
                   CURSOS DE TRÂNSITO
                 </span>
-                <span className="text-[7px] font-bold text-white/60 uppercase tracking-widest mt-0.5">
+                <span className="text-[6px] font-bold text-white/60 uppercase tracking-widest mt-0.5">
                   PLATAFORMA OFICIAL DS DESPACHANTE
                 </span>
               </div>

@@ -45,11 +45,11 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Cursos Rápidos</h4>
             <ul className="space-y-3 text-sm text-white/70">
-              <li><Link href="#cursos" className="hover:text-secondary transition-colors">Formação MOPP</Link></li>
-              <li><Link href="#cursos" className="hover:text-secondary transition-colors">Transporte Escolar</Link></li>
-              <li><Link href="#cursos" className="hover:text-secondary transition-colors">Veículos de Emergência</Link></li>
-              <li><Link href="#cursos" className="hover:text-secondary transition-colors">Direção Defensiva</Link></li>
-              <li><Link href="#cursos" className="hover:text-secondary transition-colors">Normas Regulamentadoras</Link></li>
+              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Formação MOPP</Link></li>
+              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Transporte Escolar</Link></li>
+              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Veículos de Emergência</Link></li>
+              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Direção Defensiva</Link></li>
+              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Normas Regulamentadoras</Link></li>
             </ul>
           </div>
 
@@ -57,8 +57,8 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Institucional</h4>
             <ul className="space-y-3 text-sm text-white/70">
               <li><Link href={LINKS.MAIN_SITE} target="_blank" className="hover:text-secondary transition-colors">DS Despachante</Link></li>
-              <li><Link href="#como-funciona" className="hover:text-secondary transition-colors">Como Funciona</Link></li>
-              <li><Link href="#faq" className="hover:text-secondary transition-colors">Dúvidas Frequentes</Link></li>
+              <li><Link href="/#como-funciona" className="hover:text-secondary transition-colors">Como Funciona</Link></li>
+              <li><Link href="/#faq" className="hover:text-secondary transition-colors">Dúvidas Frequentes</Link></li>
               <li><Link href="#" className="hover:text-secondary transition-colors">Termos de Uso</Link></li>
               <li><Link href="#" className="hover:text-secondary transition-colors">Privacidade</Link></li>
             </ul>

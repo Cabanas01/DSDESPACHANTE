@@ -44,7 +44,7 @@ git push origin main
 - **Next.js 15**: Performance e SEO de última geração.
 - **Tailwind CSS & ShadCN UI**: Interface moderna e responsiva.
 - **Gerador de Marketing IA**: Ferramenta integrada para criação de cópias de vendas em conformidade com o DETRAN.
-- **Catálogo de Cursos**: Listagem dinâmica de 28 cursos de especialização e reciclagem.
+- **Catálogo de Cursos**: Listagem dinâmica de 28 cursos oficiais.
 
 ---
 © 2025 DS Cursos de Trânsito - Unidade Educacional DS Despachante Guarujá.

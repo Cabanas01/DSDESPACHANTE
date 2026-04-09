@@ -25,11 +25,19 @@ git commit -m "descrição das alterações"
 git push origin main
 ```
 
-### Problemas com o Push? (Rejeitado)
-Se o Git disser que o push foi rejeitado (`rejected`), force a atualização com:
+### Resolução de Erros (Divergent Branches / Rejected)
+Se o Git apresentar erro de ramos divergentes (`divergent branches`) ou rejeitar o push, execute estes comandos para forçar a sincronização:
 
+**Opção A: Forçar o seu código do Studio para o GitHub (Recomendado se o Studio for a versão final):**
 ```bash
 git push -f origin main
+```
+
+**Opção B: Tentar mesclar as alterações (Se houver código no GitHub que você quer manter):**
+```bash
+git config pull.rebase false
+git pull origin main
+git push origin main
 ```
 
 ## Tecnologias e Funcionalidades

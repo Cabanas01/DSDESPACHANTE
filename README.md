@@ -5,46 +5,29 @@ Este é o projeto da plataforma oficial de cursos da **DS Despachante Guarujá**
 ## Repositório
 Este projeto está vinculado ao repositório: [https://github.com/Cabanas01/DSDESPACHANTE.git](https://github.com/Cabanas01/DSDESPACHANTE.git)
 
-## Comandos para Sincronização
+## Comandos para Sincronização e Resolução de Erros
 
-### Configuração Inicial
-Se você ainda não conectou sua pasta local ao GitHub, execute estes comandos no terminal:
+### Se o Push for Rejeitado (Rejected / non-fast-forward)
+Se você tentou dar um push e recebeu o erro `[rejected]`, execute o comando abaixo no terminal para forçar a sincronização do Studio para o GitHub (isso substituirá o código do GitHub pelo código atual do Studio):
 
-```bash
-git remote add origin https://github.com/Cabanas01/DSDESPACHANTE.git
-git branch -M main
-git push -u origin main
-```
-
-### Enviar Novas Alterações
-Para enviar cada nova modificação que fizermos aqui para o seu GitHub, execute:
-
-```bash
-git add .
-git commit -m "descrição das alterações"
-git push origin main
-```
-
-### Resolução de Erros (Divergent Branches / Rejected)
-Se o Git apresentar erro de ramos divergentes (`divergent branches`) ou rejeitar o push, execute estes comandos para forçar a sincronização:
-
-**Opção A: Forçar o seu código do Studio para o GitHub (Recomendado se o Studio for a versão final):**
 ```bash
 git push -f origin main
 ```
 
-**Opção B: Tentar mesclar as alterações (Se houver código no GitHub que você quer manter):**
+### Comandos de Rotina
+Para enviar novas alterações normalmente:
+
 ```bash
-git config pull.rebase false
-git pull origin main
+git add .
+git commit -m "atualização de cursos e links"
 git push origin main
 ```
 
 ## Tecnologias e Funcionalidades
 - **Next.js 15**: Performance e SEO de última geração.
 - **Tailwind CSS & ShadCN UI**: Interface moderna e responsiva.
-- **Gerador de Marketing IA**: Ferramenta integrada para criação de cópias de vendas em conformidade com o DETRAN.
-- **Catálogo de Cursos**: Listagem dinâmica de 28 cursos oficiais.
+- **Gerador de Marketing IA**: Ferramenta integrada para criação de cópias de vendas.
+- **Catálogo de Cursos**: 28 cursos oficiais com checkout integrado Bludata e suporte via WhatsApp.
 
 ---
 © 2025 DS Cursos de Trânsito - Unidade Educacional DS Despachante Guarujá.

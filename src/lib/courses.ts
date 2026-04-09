@@ -24,28 +24,19 @@ export interface Course {
 }
 
 export const COURSES: Course[] = [
-  // FORMAÇÃO
+  // FORMAÇÃO (R$ 190,00)
   {
     id: "mopp-formacao",
     name: "CURSO PARA CONDUTORES DE TRANSPORTE DE PRODUTOS PERIGOSOS",
     category: "Formação",
     description: "Formação essencial para motoristas que transportam cargas químicas e inflamáveis.",
-    longDescription: "O curso destina-se a motoristas que desejam se profissionalizar e exercer a atividade remunerada de transporte de produtos ou resíduos perigosos. O curso de Cargas Perigosas (MOPP) é especialmente desenvolvido para capacitar todos aqueles que buscam ingressar ou aprimorar sua atuação em atividades remuneradas no transporte, visando agir com responsabilidade e segurança.",
     price: 190.00,
     purchaseUrl: "https://ead-checkout.bludata.net/?p=a51412f4-114a-4274-ada6-b04b83d6e0a1",
     whatsappUrl: "https://wa.me/5513991932590?text=Oie%2C%20tudo%20bem%3F%20Vim%20pelo%20curso%20para%20condutores%20de%20transporte%20de%20produtos%20perigosos",
     image: "/image/mopp-formacao.jpg",
     tags: ["Mais vendido", "Oficial"],
-    isPopular: true,
     hours: "50 horas/aula",
     minDays: "7 dias",
-    requirements: ["Ser maior de 21 anos", "Habilitado B, C, D ou E", "CNH válida"],
-    modules: [
-      { title: "Legislação de Trânsito", hours: "10h", description: "CTB e normas de transporte." },
-      { title: "Direção Defensiva", hours: "15h", description: "Prevenção de acidentes." },
-      { title: "Primeiros Socorros e Meio Ambiente", hours: "10h", description: "Providências em acidentes." },
-      { title: "Movimentação de Produtos Perigosos", hours: "15h", description: "Classificação e reações." }
-    ]
   },
   {
     id: "escolar-formacao",
@@ -100,7 +91,7 @@ export const COURSES: Course[] = [
     minDays: "7 dias",
   },
 
-  // ATUALIZAÇÃO
+  // ATUALIZAÇÃO (R$ 100,00)
   {
     id: "mopp-atualizacao",
     name: "CURSO DE ATUALIZAÇÃO PARA CONDUTORES DE VEÍCULO DE TRANSPORTE DE PRODUTOS PERIGOSOS",
@@ -162,7 +153,7 @@ export const COURSES: Course[] = [
     hours: "16 horas/aula",
   },
 
-  // CURSO LIVRE
+  // CURSO LIVRE (R$ 45,00)
   {
     id: "curso-livre-mopp",
     name: "CURSO LIVRE DE ATUALIZAÇÃO PARA CONDUTORES DE VEÍCULO DE TRANSPORTE DE PRODUTOS PERIGOSOS",

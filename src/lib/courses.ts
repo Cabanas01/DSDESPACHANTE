@@ -23,7 +23,7 @@ export interface Course {
 }
 
 export const COURSES: Course[] = [
-  // FORMAÇÃO
+  // FORMAÇÃO (190,00)
   {
     id: "mopp-formacao",
     name: "CURSO PARA CONDUTORES DE TRANSPORTE DE PRODUTOS PERIGOSOS",
@@ -90,7 +90,7 @@ export const COURSES: Course[] = [
     minDays: "7 dias",
   },
 
-  // ATUALIZAÇÃO
+  // ATUALIZAÇÃO (100,00)
   {
     id: "mopp-atualizacao",
     name: "CURSO DE ATUALIZAÇÃO PARA CONDUTORES DE VEÍCULO DE TRANSPORTE DE PRODUTOS PERIGOSOS",
@@ -152,7 +152,7 @@ export const COURSES: Course[] = [
     hours: "16 horas/aula",
   },
 
-  // CURSOS LIVRES
+  // CURSOS LIVRES (45,00)
   {
     id: "curso-livre-mopp",
     name: "CURSO LIVRE DE ATUALIZAÇÃO PARA CONDUTORES DE VEÍCULO DE TRANSPORTE DE PRODUTOS PERIGOSOS",

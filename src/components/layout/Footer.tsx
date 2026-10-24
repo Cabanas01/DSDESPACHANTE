@@ -1,97 +1,23 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { Facebook, Instagram, Mail, MapPin, MessageCircle } from "lucide-react";
 import { BRAND, LINKS } from "@/lib/constants";
-import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-white pt-20 pb-10">
+    <footer className="bg-primary pb-8 pt-16 text-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 lg:col-span-1">
-            {/* Logo Footer - Stacked layout */}
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="relative w-10 h-10 overflow-hidden shrink-0">
-                <Image 
-                  src="/image/logo.png" 
-                  alt="Logo DS" 
-                  width={40} 
-                  height={40} 
-                  className="object-contain"
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[10px] font-black tracking-tighter text-secondary leading-none uppercase">
-                  CURSOS DE TRÂNSITO
-                </span>
-                <span className="text-[6px] font-bold text-white/60 uppercase tracking-widest mt-0.5">
-                  PLATAFORMA OFICIAL DS DESPACHANTE
-                </span>
-              </div>
-            </Link>
-            <p className="text-white/70 text-sm leading-relaxed mb-6">
-              Sua melhor opção para cursos de trânsito online. Qualidade, rapidez e conformidade legal com o selo de confiança da DS Despachante Guarujá.
-            </p>
-            <div className="flex gap-4">
-              <Link href={LINKS.FACEBOOK} target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all">
-                <Facebook className="w-5 h-5" />
-              </Link>
-              <Link href={LINKS.INSTAGRAM} target="_blank" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-secondary-foreground transition-all">
-                <Instagram className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Cursos Rápidos</h4>
-            <ul className="space-y-3 text-sm text-white/70">
-              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Formação MOPP</Link></li>
-              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Transporte Escolar</Link></li>
-              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Veículos de Emergência</Link></li>
-              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Direção Defensiva</Link></li>
-              <li><Link href="/#cursos" className="hover:text-secondary transition-colors">Normas Regulamentadoras</Link></li>
-            </ul>
+            <Link href="/" className="flex items-center gap-3"><Image src="/image/logo.png" alt="DS Despachante Guarujá" width={48} height={48} className="size-12 object-contain" /><span className="text-sm font-black uppercase tracking-tight">DS Despachante<br /><span className="text-xs font-bold text-white/65">Guarujá</span></span></Link>
+            <p className="mt-5 text-sm leading-relaxed text-white/75">Atendimento para documentação veicular e acesso à área de cursos da DS.</p>
+            <div className="mt-5 flex gap-3"><Link href={LINKS.FACEBOOK} target="_blank" rel="noopener noreferrer" aria-label="Facebook da DS" className="grid size-10 place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-secondary-foreground"><Facebook className="size-5" /></Link><Link href={LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram da DS" className="grid size-10 place-items-center rounded-full bg-white/10 hover:bg-secondary hover:text-secondary-foreground"><Instagram className="size-5" /></Link></div>
           </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Institucional</h4>
-            <ul className="space-y-3 text-sm text-white/70">
-              <li><Link href={LINKS.MAIN_SITE} target="_blank" className="hover:text-secondary transition-colors">DS Despachante</Link></li>
-              <li><Link href="/#como-funciona" className="hover:text-secondary transition-colors">Como Funciona</Link></li>
-              <li><Link href="/#faq" className="hover:text-secondary transition-colors">Dúvidas Frequentes</Link></li>
-              <li><Link href="#" className="hover:text-secondary transition-colors">Termos de Uso</Link></li>
-              <li><Link href="#" className="hover:text-secondary transition-colors">Privacidade</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-bold text-lg mb-6 border-b border-white/10 pb-2 inline-block">Contato</h4>
-            <ul className="space-y-4 text-sm text-white/70">
-              <li className="flex gap-3">
-                <MapPin className="w-5 h-5 text-secondary shrink-0" />
-                <span>{BRAND.ADDRESS}</span>
-              </li>
-              <li className="flex gap-3">
-                <Phone className="w-5 h-5 text-secondary shrink-0" />
-                <span>{BRAND.PHONE}</span>
-              </li>
-              <li className="flex gap-3">
-                <Mail className="w-5 h-5 text-secondary shrink-0" />
-                <span>{BRAND.EMAIL}</span>
-              </li>
-            </ul>
-          </div>
+          <div><h2 className="font-bold">Institucional</h2><ul className="mt-4 space-y-3 text-sm text-white/75"><li><Link href="/" className="hover:text-secondary">Início</Link></li><li><Link href="/#servicos" className="hover:text-secondary">Serviços</Link></li><li><Link href="/#sobre" className="hover:text-secondary">Sobre nós</Link></li><li><Link href="/#contato" className="hover:text-secondary">Contato</Link></li></ul></div>
+          <div><h2 className="font-bold">Cursos</h2><ul className="mt-4 space-y-3 text-sm text-white/75"><li><Link href="/cursos" className="hover:text-secondary">Catálogo de cursos</Link></li><li><Link href="/cursos#cursos" className="hover:text-secondary">Ver cursos disponíveis</Link></li><li><Link href="/cursos#faq" className="hover:text-secondary">Dúvidas frequentes</Link></li></ul></div>
+          <div><h2 className="font-bold">Atendimento</h2><p className="mt-4 text-sm text-white/75">Para confirmar informações e iniciar seu atendimento, fale diretamente com a equipe.</p><Link href={LINKS.INSTITUTIONAL_WHATSAPP} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center font-bold text-secondary hover:text-white"><MessageCircle className="mr-2 size-5" />{BRAND.PHONE}</Link><a href={`mailto:${BRAND.EMAIL}`} className="mt-3 flex items-center text-sm text-white/75 hover:text-secondary"><Mail className="mr-2 size-4" />{BRAND.EMAIL}</a><a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BRAND.ADDRESS)}`} target="_blank" rel="noopener noreferrer" className="mt-3 flex items-start text-sm text-white/75 hover:text-secondary"><MapPin className="mr-2 mt-0.5 size-4 shrink-0" />{BRAND.ADDRESS}</a></div>
         </div>
-
-        <div className="pt-8 border-t border-white/10 text-center flex flex-col gap-4">
-          <p className="text-[10px] text-white/40 uppercase tracking-widest font-black">
-            Unidade Educacional DS Despachante Guarujá
-          </p>
-          <p className="text-xs text-white/60">
-            &copy; {new Date().getFullYear()} {BRAND.NAME}. Todos os direitos reservados. 
-            Cursos homologados conforme normas do CONTRAN e DETRAN.
-          </p>
-        </div>
+        <div className="mt-12 border-t border-white/15 pt-6 text-center text-xs text-white/60">© {new Date().getFullYear()} DS Despachante Guarujá. Todos os direitos reservados.</div>
       </div>
     </footer>
   );

@@ -23,7 +23,7 @@ export default function CoursePage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
         <h1 className="text-2xl font-bold mb-4">Curso não encontrado</h1>
-        <Button onClick={() => router.push("/")}>Voltar para o início</Button>
+        <Button onClick={() => router.push("/cursos")}>Voltar para cursos</Button>
       </div>
     );
   }
@@ -43,7 +43,7 @@ export default function CoursePage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       
-      <main className="pt-20 pb-24">
+      <main id="conteudo-principal" className="pt-20 pb-24">
         {/* Course Hero */}
         <section className="bg-muted/30 py-12 md:py-20">
           <div className="container mx-auto px-4">
@@ -53,7 +53,7 @@ export default function CoursePage() {
                   variant="ghost" 
                   size="sm" 
                   className="mb-6 -ml-2 text-muted-foreground hover:text-primary"
-                  onClick={() => router.push("/#cursos")}
+                  onClick={() => router.push("/cursos#cursos")}
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" /> Voltar ao catálogo
                 </Button>
@@ -107,7 +107,7 @@ export default function CoursePage() {
                     </Link>
                   </Button>
                   <Button variant="outline" size="lg" className="border-primary text-primary h-14 px-8 text-lg font-bold" asChild>
-                    <Link href={course.whatsappUrl} target="_blank">
+                    <Link href={course.whatsappUrl} target="_blank" rel="noopener noreferrer">
                       <MessageCircle className="w-5 h-5 mr-2 text-[#25D366]" /> Tirar Dúvidas
                     </Link>
                   </Button>

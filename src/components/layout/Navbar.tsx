@@ -1,89 +1,41 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
-import { MessageCircle, ExternalLink, Menu, X } from "lucide-react";
-import { useState } from "react";
+
+const items = [
+  { href: "/", label: "Início" },
+  { href: "/#servicos", label: "Serviços" },
+  { href: "/#sobre", label: "Sobre nós" },
+  { href: "/cursos", label: "Cursos" },
+  { href: "/#contato", label: "Contato" },
+];
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const closeMenu = () => setIsMenuOpen(false);
+  const isActive = (href: string) => href === "/cursos" ? pathname.startsWith("/cursos") : href === "/" && pathname === "/";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        {/* Logo Layout: Img Left + Text Right Stacked */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden shrink-0">
-            <Image 
-              src="/image/logo.png" 
-              alt="Logo DS" 
-              width={48} 
-              height={48} 
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-[10px] md:text-sm font-black tracking-tighter text-primary leading-none uppercase">
-              CURSOS DE TRÂNSITO
-            </span>
-            <span className="text-[6px] md:text-[8px] font-bold text-muted-foreground uppercase tracking-widest mt-0.5">
-              PLATAFORMA OFICIAL DS DESPACHANTE
-            </span>
-          </div>
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/95 shadow-sm backdrop-blur-md" aria-label="Navegação principal">
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <Link href="/" className="flex items-center gap-3" onClick={closeMenu}>
+          <Image src="/image/logo.png" alt="DS Despachante Guarujá" width={48} height={48} className="size-11 object-contain" priority />
+          <span className="flex flex-col leading-none"><span className="text-sm font-black uppercase tracking-tight text-primary">Despachante</span><span className="mt-1 text-[10px] font-bold uppercase tracking-[.18em] text-muted-foreground">Guarujá</span></span>
         </Link>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-6 lg:gap-8">
-          <Link href="/#cursos" className="text-sm font-semibold hover:text-primary transition-colors">Cursos</Link>
-          <Link href="/#como-funciona" className="text-sm font-semibold hover:text-primary transition-colors">Como Funciona</Link>
-          <Link href="/#faq" className="text-sm font-semibold hover:text-primary transition-colors">FAQ</Link>
-          <Link href={LINKS.MAIN_SITE} target="_blank" className="text-sm font-semibold flex items-center gap-1 hover:text-primary transition-colors">
-            Site Oficial <ExternalLink className="w-3 h-3" />
-          </Link>
+        <div className="hidden items-center gap-5 lg:gap-7 md:flex">
+          {items.map((item) => <Link key={item.href} href={item.href} aria-current={isActive(item.href) ? "page" : undefined} className={`text-sm font-semibold transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-foreground"}`}>{item.label}</Link>)}
         </div>
-
-        <div className="hidden md:flex items-center gap-3">
-          <Button size="sm" asChild className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md font-bold">
-            <Link href="/#cursos">Ver Catálogo</Link>
-          </Button>
-        </div>
-
-        {/* Mobile Menu Trigger */}
-        <button 
-          onClick={() => setIsMenuOpen(!isMenuOpen)} 
-          className="md:hidden p-2 text-primary focus:outline-none"
-          aria-label="Menu"
-        >
-          {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-        </button>
+        <Button size="sm" asChild className="hidden bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90 md:inline-flex"><Link href={LINKS.INSTITUTIONAL_WHATSAPP} target="_blank" rel="noopener noreferrer"><MessageCircle className="mr-1.5 size-4" />Fale no WhatsApp</Link></Button>
+        <button type="button" onClick={() => setIsMenuOpen((open) => !open)} className="rounded-md p-2 text-primary outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-secondary md:hidden" aria-expanded={isMenuOpen} aria-controls="mobile-navigation" aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}>{isMenuOpen ? <X className="size-7" /> : <Menu className="size-7" />}</button>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-border p-6 absolute top-20 left-0 right-0 shadow-2xl animate-in fade-in slide-in-from-top-4">
-          <div className="flex flex-col gap-5">
-            <Link onClick={() => setIsMenuOpen(false)} href="/#cursos" className="text-lg font-bold border-b border-border pb-2">Cursos</Link>
-            <Link onClick={() => setIsMenuOpen(false)} href="/#como-funciona" className="text-lg font-bold border-b border-border pb-2">Como Funciona</Link>
-            <Link onClick={() => setIsMenuOpen(false)} href="/#faq" className="text-lg font-bold border-b border-border pb-2">FAQ</Link>
-            <Link onClick={() => setIsMenuOpen(false)} href={LINKS.MAIN_SITE} target="_blank" className="text-lg font-bold flex items-center justify-between border-b border-border pb-2">
-              Site Oficial DS <ExternalLink className="w-5 h-5" />
-            </Link>
-            <div className="flex flex-col gap-3 pt-2">
-              <Button asChild className="bg-secondary text-secondary-foreground w-full h-12 text-lg font-bold">
-                <Link href="/#cursos" onClick={() => setIsMenuOpen(false)}>Ver Catálogo</Link>
-              </Button>
-              <Button variant="outline" asChild className="border-primary text-primary w-full h-12 text-lg font-bold">
-                <Link href={LINKS.WHATSAPP} target="_blank">
-                  <MessageCircle className="w-5 h-5 mr-2 text-[#25D366]" /> Suporte WhatsApp
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
+      {isMenuOpen && <div id="mobile-navigation" className="border-t border-border bg-white px-4 py-5 shadow-xl md:hidden"><div className="container mx-auto flex flex-col gap-1">{items.map((item) => <Link key={item.href} href={item.href} aria-current={isActive(item.href) ? "page" : undefined} onClick={closeMenu} className={`rounded-md px-3 py-3 text-base font-bold hover:bg-muted focus-visible:bg-muted focus-visible:outline-none ${isActive(item.href) ? "bg-muted text-primary" : ""}`}>{item.label}</Link>)}<Button asChild className="mt-3 bg-secondary font-bold text-secondary-foreground hover:bg-secondary/90"><Link href={LINKS.INSTITUTIONAL_WHATSAPP} target="_blank" rel="noopener noreferrer" onClick={closeMenu}><MessageCircle className="mr-2 size-5" />Falar com a DS</Link></Button></div></div>}
     </nav>
   );
 }

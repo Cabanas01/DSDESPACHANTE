@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
 import Link from "next/link";
-import { ShieldCheck, ArrowRight, Star } from "lucide-react";
+import { ShieldCheck, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export function Hero() {
@@ -39,30 +39,6 @@ export function Hero() {
             <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 w-full sm:w-auto h-14 px-10 text-lg font-black shadow-xl transition-all hover:scale-105 active:scale-95" asChild>
               <Link href="#cursos">VER CURSOS AGORA <ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
-            
-            <div className="flex items-center gap-3 py-2 bg-black/30 backdrop-blur-sm rounded-full px-4 border border-white/10 w-full sm:w-auto justify-center">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white bg-muted overflow-hidden relative">
-                    <Image 
-                      src={`https://picsum.photos/seed/${i + 50}/40/40`} 
-                      alt="Aluno DS" 
-                      width={40}
-                      height={40}
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-              <div className="flex flex-col">
-                <div className="flex items-center gap-0.5">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-3 h-3 fill-secondary text-secondary" />
-                  ))}
-                </div>
-                <span className="text-[10px] md:text-xs font-black text-white uppercase">+ 1.284 Alunos Formados</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

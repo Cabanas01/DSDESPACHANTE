@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/.node_modules-corrupt-*/
 /.pnp
 .pnp.*
 .yarn/*
@@ -32,6 +33,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+/.build-preview.log
 
 # typescript
 *.tsbuildinfo

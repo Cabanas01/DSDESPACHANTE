@@ -29,7 +29,7 @@ export function CTASection() {
               className="border-white bg-transparent text-white hover:bg-white hover:text-primary h-14 px-10 text-lg font-bold transition-all group" 
               asChild
             >
-              <Link href={LINKS.WHATSAPP} target="_blank">
+              <Link href={LINKS.WHATSAPP} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-5 h-5 mr-2 text-[#25D366]" /> 
                 <span className="text-white group-hover:text-primary transition-colors">Falar no WhatsApp</span>
               </Link>

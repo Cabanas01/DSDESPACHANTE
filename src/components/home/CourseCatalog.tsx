@@ -55,7 +55,7 @@ function CourseCard({ course }: { course: Course }) {
             </Link>
           </Button>
           <Button variant="outline" className="w-full border-primary/20 text-muted-foreground hover:bg-primary/5 hover:text-primary h-11 font-semibold" asChild>
-            <Link href={course.whatsappUrl || LINKS.WHATSAPP} target="_blank">
+            <Link href={course.whatsappUrl || LINKS.WHATSAPP} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-2 text-[#25D366]" /> WhatsApp
             </Link>
           </Button>

@@ -23,6 +23,15 @@
 - [x] Validar typecheck, build e regressão automatizada.
 - [x] Publicar a revisão em produção e verificar o domínio.
 
+## Task de imagens reais — 2026-10-25
+
+- [x] Remover a imagem inadequada de caminhão do hero.
+- [x] Criar imagem de carro na orla de Guarujá para a abertura.
+- [x] Criar imagem de documentação e chave de carro para a seção Sobre.
+- [x] Criar imagem de estudo de trânsito para a chamada de Cursos.
+- [x] Validar typecheck, build e regressão de cursos.
+- [ ] Publicar esta nova revisão em produção.
+
 ## Dados pendentes (não usar como conteúdo)
 
 - Horário de atendimento e telefone adicional, caso existam.

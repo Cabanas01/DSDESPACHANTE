@@ -22,7 +22,7 @@ export function InstitutionalHome() {
       <Navbar />
 
       <section id="inicio" className="relative isolate flex min-h-[690px] items-center overflow-hidden pt-20 text-white">
-        <Image src="/image/hero-bg.jpg" alt="Rodovia em paisagem litorânea" fill priority className="-z-20 object-cover" />
+        <Image src="/image/hero-car-guaruja.png" alt="Carro de passeio em avenida litorânea de Guarujá" fill priority className="-z-20 object-cover" sizes="100vw" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(26,20,13,.96)_0%,rgba(26,20,13,.78)_45%,rgba(26,20,13,.25)_100%)]" />
         <div className="container mx-auto grid gap-12 px-4 py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:py-28">
           <div className="max-w-2xl motion-safe:animate-fade-in-up">
@@ -44,7 +44,7 @@ export function InstitutionalHome() {
           <div className="relative mx-auto hidden w-full max-w-md lg:block">
             <div className="absolute -inset-5 rounded-[2rem] border border-secondary/40" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border-8 border-white/15 shadow-2xl">
-              <Image src="/image/hero-bg.jpg" alt="Atendimento veicular da DS em Guarujá" fill className="object-cover" sizes="(min-width: 1024px) 38vw, 0px" />
+              <Image src="/image/documentacao-carro.png" alt="Documentos veiculares e chave de carro" fill className="object-cover" sizes="(min-width: 1024px) 38vw, 0px" />
               <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-black/70 p-4 backdrop-blur-md"><p className="text-xs font-bold uppercase tracking-[.16em] text-secondary">Praticidade para você</p><p className="mt-1 text-sm font-semibold text-white">Documentação, orientação e cursos em um só lugar.</p></div>
             </div>
           </div>
@@ -72,7 +72,7 @@ export function InstitutionalHome() {
       <section id="sobre" className="scroll-mt-20 bg-stone-50 py-20 lg:py-24">
         <div className="container mx-auto grid gap-10 px-4 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <div className="relative min-h-[390px] overflow-hidden rounded-3xl bg-primary shadow-xl">
-            <Image src="/image/hero-bg.jpg" alt="Paisagem litorânea de Guarujá usada na identidade visual da DS" fill className="object-cover opacity-75" sizes="(min-width: 1024px) 43vw, 100vw" />
+            <Image src="/image/documentacao-carro.png" alt="Documentação veicular organizada ao lado de um carro" fill className="object-cover opacity-75" sizes="(min-width: 1024px) 43vw, 100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/35 to-transparent" />
             <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/20 bg-black/35 p-5 backdrop-blur-sm"><Image src="/image/logo.png" alt="Logo da DS Despachante Guarujá" width={76} height={76} className="size-16 object-contain" /><p className="mt-4 text-lg font-bold text-white">Atendimento próximo, informação clara.</p><p className="mt-1 text-sm text-white/75">Uma identidade local com a praticidade de resolver online.</p></div>
           </div>
@@ -95,7 +95,8 @@ export function InstitutionalHome() {
 
       <section className="container mx-auto px-4 py-20 lg:py-24">
         <div className="relative overflow-hidden rounded-3xl bg-primary px-7 py-10 text-white sm:px-12 sm:py-14">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_20%,rgba(255,193,7,.35),transparent_30%)]" />
+          <Image src="/image/cursos-transito.png" alt="Pessoa estudando conteúdo de trânsito online" fill className="object-cover opacity-35" sizes="100vw" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/35" />
           <div className="relative flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
             <div className="max-w-xl"><p className="text-sm font-bold uppercase tracking-[.16em] text-white/70">Cursos de trânsito</p><h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Seu próximo passo começa aqui.</h2><p className="mt-3 text-white/80">Acesse a área de cursos da DS, com catálogo, detalhes e os links de inscrição atuais.</p></div>
             <Button size="lg" asChild className="shrink-0 bg-secondary text-secondary-foreground hover:bg-secondary/90"><Link href="/cursos">Acessar cursos <GraduationCap className="ml-2 size-5" /></Link></Button>

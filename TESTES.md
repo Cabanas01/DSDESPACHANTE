@@ -32,3 +32,4 @@
 | 2026-10-25 | Refresh visual | `npm run typecheck`, `npm run build` e `node --test tests/routing.test.mjs`: 16 de 16 testes aprovados; 35 páginas estáticas geradas. |
 | 2026-10-25 | Produção após refresh | Vercel `dpl_6Ni9r6VJ5mFYoDTyr6ze5jwfD2tP` READY; domínio principal retornou HTTP 200 para `/`, `/cursos` e `/cursos/mopp-atualizacao`; home contém a nova chamada visual e o Instagram oficial. |
 | 2026-10-25 | Imagens reais | Typecheck, build e 16 de 16 testes de regressão aprovados após substituir o hero e preencher as seções Sobre/Cursos com imagens específicas. |
+| 2026-10-25 | Produção das imagens | Vercel `dpl_A4yTpreo3q8wrfytADANjo839viC` READY; `/` retornou HTTP 200 e contém `hero-car-guaruja.png`, `documentacao-carro.png` e `cursos-transito.png`. |

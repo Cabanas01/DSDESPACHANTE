@@ -30,7 +30,7 @@
 - [x] Criar imagem de documentação e chave de carro para a seção Sobre.
 - [x] Criar imagem de estudo de trânsito para a chamada de Cursos.
 - [x] Validar typecheck, build e regressão de cursos.
-- [ ] Publicar esta nova revisão em produção.
+- [x] Publicar esta nova revisão em produção.
 - [x] Ajustar o cabeçalho para o padrão escuro sobre o hero da referência visual.
 
 ## Dados pendentes (não usar como conteúdo)

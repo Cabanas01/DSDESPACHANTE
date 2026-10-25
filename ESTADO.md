@@ -26,7 +26,7 @@
 
 ### Task de melhoria visual — 2026-10-25
 
-Em andamento. A home institucional recebeu uma composição visual com imagem no hero, imagem institucional na seção Sobre, cards de serviços mais destacados e CTA para o Instagram oficial `@dsdespachante_`. O catálogo e os detalhes de cursos permanecem sem alterações. Typecheck, build e 16 testes de regressão passaram; falta publicar esta revisão e conferir os domínios em produção.
+Concluída. A home institucional recebeu uma composição visual com imagem no hero, imagem institucional na seção Sobre, cards de serviços mais destacados e CTA para o Instagram oficial `@dsdespachante_`. O catálogo e os detalhes de cursos permanecem sem alterações. Typecheck, build e 16 testes de regressão passaram. O deployment de produção da Vercel foi marcado como READY no commit `2292b92179cd0235481c1aaef9dd75bd7db59c34`; `/`, `/cursos` e `/cursos/mopp-atualizacao` responderam HTTP 200 no domínio principal.
 
 Prévia hospedada e publicação permanecem pendentes: não há configuração de hospedagem no repositório. O domínio atual respondeu `Server: Vercel`, confirmando que ele já é servido pela plataforma. A conexão Vercel disponível retornou a conta incorreta (`dinheirodegraca013@gmail.com`) e não possui projeto identificado como DS Despachante (apenas `nexusteste`), que não será reutilizado. A tela de login foi aberta para a conta informada pelo usuário (`GuiTabanas3@gmail.com`); a próxima ação é autenticar essa conta e localizar o projeto correto. A versão local passou em testes, tipos, build e fluxo de retorno ao catálogo em servidor de produção local.
 

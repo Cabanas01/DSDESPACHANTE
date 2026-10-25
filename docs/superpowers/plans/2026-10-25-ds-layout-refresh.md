@@ -5,4 +5,4 @@
 - [x] Melhorar hero, Sobre, serviços e chamada para Instagram.
 - [x] Corrigir link oficial do Instagram.
 - [x] Rodar typecheck, build e testes de regressão.
-- [ ] Publicar em produção e verificar domínios.
+- [x] Publicar em produção e verificar domínios.

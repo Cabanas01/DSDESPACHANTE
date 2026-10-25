@@ -21,7 +21,7 @@
 - [x] Corrigir URL do Instagram no rodapé e nos CTAs.
 - [x] Preservar a área `/cursos` e seus 28 cursos.
 - [x] Validar typecheck, build e regressão automatizada.
-- [ ] Publicar a revisão em produção e verificar o domínio.
+- [x] Publicar a revisão em produção e verificar o domínio.
 
 ## Dados pendentes (não usar como conteúdo)
 

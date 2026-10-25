@@ -18,8 +18,8 @@ export function InstitutionalHome() {
         <div className="container mx-auto grid gap-12 px-4 pb-8 pt-10 sm:py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:py-28">
           <div className="max-w-2xl motion-safe:animate-fade-in-up">
             <p className="mb-5 text-xs font-bold uppercase tracking-[.18em] text-white/75">DS Despachante · Guarujá</p>
-            <h1 className="text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-7xl">Seu veículo em dia.<br /><span className="text-secondary">Sua vida mais simples.</span></h1>
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/90">Conte com a DS para simplificar a documentação do seu veículo, com atendimento direto quando você precisar.</p>
+            <h1 className="text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-7xl">Despachante veicular em Guarujá.<br /><span className="text-secondary">Documentação sem complicação.</span></h1>
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/90">A DS orienta você em transferência, licenciamento, CNH, débitos e recursos, com atendimento direto em Santo Antônio.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button size="lg" asChild className="h-12 bg-secondary px-7 text-base font-bold text-secondary-foreground hover:bg-secondary/90">
                 <Link href={LINKS.INSTITUTIONAL_WHATSAPP} target="_blank" rel="noopener noreferrer"><MessageCircle className="mr-2 size-5" />Falar com a DS</Link>

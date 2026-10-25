@@ -3,21 +3,21 @@ import type { Metadata } from "next";
 import { BRAND, LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Despachante em Guarujá | Transferência, CNH e Multas | DS",
-  description: "DS Despachante em Guarujá: transferência, licenciamento, CRLV-e, CNH, multas e recursos. Atendimento em Santo Antônio. Fale pelo (13) 99193-2590.",
+  title: "DS Despachante Guarujá | Documentação Veicular e CNH",
+  description: "DS Despachante Guarujá: documentação veicular, transferência, licenciamento, CRLV-e, renovação de CNH e recursos de multas. Atendimento em Santo Antônio.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "pt_BR",
     url: "/",
     siteName: BRAND.PARENT,
-    title: "DS Despachante em Guarujá | Documentação, CNH e Multas",
-    description: "Atendimento em Santo Antônio, Guarujá. Transferência de veículo, licenciamento, CNH e recursos de multas.",
+    title: "DS Despachante Guarujá | Documentação Veicular e CNH",
+    description: "Documentação veicular, transferência, licenciamento, CNH e recursos de multas em Santo Antônio, Guarujá.",
     images: [{ url: "/image/hero-car-guaruja.png", alt: "DS Despachante Guarujá" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DS Despachante em Guarujá | Documentação e CNH",
+    title: "DS Despachante Guarujá | Documentação Veicular e CNH",
     description: "Transferência, licenciamento, CRLV-e, CNH e recursos de multas em Santo Antônio, Guarujá.",
     images: ["/image/hero-car-guaruja.png"],
   },

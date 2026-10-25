@@ -1,24 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, CarFront, CircleDollarSign, ClipboardList, FileText, GraduationCap, Instagram, MapPin, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, BadgeCheck, GraduationCap, Instagram, MapPin, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/button";
 import { BRAND, LINKS } from "@/lib/constants";
-
-const services = [
-  { title: "Transferência de veículo", description: "Atendimento para as etapas de transferência do seu veículo.", icon: CarFront },
-  { title: "Licenciamento", description: "Orientação para manter a documentação do veículo regularizada.", icon: ClipboardList },
-  { title: "IPVA e débitos", description: "Consulte e organize pendências relacionadas ao seu veículo.", icon: CircleDollarSign },
-  { title: "Documentação e CRLV-e", description: "Emissão de CRLV-e e orientação para regularização documental.", icon: FileText },
-  { title: "Renovação de CNH", description: "Orientação sobre as etapas e os documentos para renovar sua habilitação.", icon: BadgeCheck },
-  { title: "Multas e recursos", description: "Análise de autuações, defesa prévia e recursos administrativos à JARI e ao CETRAN.", icon: ClipboardList },
-  { title: "Suspensão e cassação", description: "Atendimento para defesa em processos relacionados ao direito de dirigir.", icon: ShieldCheck },
-  { title: "Indicação de condutor", description: "Orientação para identificar o condutor responsável conforme o seu caso.", icon: CarFront },
-];
-
-const contactFor = (service: string) =>
-  `https://wa.me/5513991932590?text=${encodeURIComponent(`Olá, vim pelo site e gostaria de informações sobre ${service}.`)}`;
+import { SERVICES, serviceWhatsApp } from "@/lib/services";
 
 export function InstitutionalHome() {
   return (
@@ -64,13 +51,13 @@ export function InstitutionalHome() {
           <p className="mb-3 text-sm font-bold uppercase tracking-[.16em] text-secondary-foreground">Atendimento DS</p>
           <h2 className="max-w-xl text-3xl font-extrabold tracking-tight sm:text-4xl">Como podemos ajudar?</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map(({ title, description, icon: Icon }) => (
+            {SERVICES.map(({ slug, title, description, icon: Icon }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-border border-t-4 border-t-secondary bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-secondary hover:shadow-lg">
                 <span className="absolute right-5 top-5 grid size-8 place-items-center rounded-full bg-accent text-secondary-foreground"><ArrowRight className="size-4" /></span>
                 <Icon className="size-9 text-secondary" aria-hidden="true" />
                 <h3 className="mt-5 text-lg font-bold text-foreground">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
-                <Link href={contactFor(title)} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center rounded-md px-1 text-sm font-bold text-primary underline-offset-4 hover:text-secondary-foreground hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">Falar sobre este serviço <ArrowRight className="ml-1 size-4" /></Link>
+                <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2"><Link href={`/servicos/${slug}`} className="inline-flex min-h-11 items-center rounded-md px-1 text-sm font-bold text-primary underline-offset-4 hover:text-secondary-foreground hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">Saiba mais <ArrowRight className="ml-1 size-4" /></Link><a href={serviceWhatsApp(title)} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center text-sm font-bold text-primary underline-offset-4 hover:text-secondary-foreground hover:underline">WhatsApp</a></div>
               </article>
             ))}
           </div>

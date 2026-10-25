@@ -52,7 +52,7 @@ export default function CoursePage() {
                 <Button 
                   variant="ghost" 
                   size="sm" 
-                  className="mb-6 -ml-2 text-muted-foreground hover:text-primary"
+                  className="mb-6 -ml-2 min-h-11 px-3 text-muted-foreground hover:text-primary"
                   onClick={() => router.push("/cursos#cursos")}
                 >
                   <ArrowLeft className="w-4 h-4 mr-2" /> Voltar ao catálogo

@@ -52,5 +52,7 @@ Revisão mobile-first: TypeScript, 16 testes e build de 35 páginas passaram. Pl
 | 2026-10-25 | Proposta visual detalhada | Typecheck, build e 16 de 16 testes aprovados após incluir a faixa “Como funciona” e a imagem de atendimento da seção Sobre. |
 # Registro desta alteração — 2026-10-25
 
-- Integração Vercel Web Analytics adicionada no layout global; execução de typecheck/build ainda pendente.
+- Integração Vercel Web Analytics adicionada no layout global; typecheck e build aprovados.
+- Deploy Vercel READY confirmado no commit `3b377f7`.
+- API de Analytics respondeu `web_analytics_not_enabled`; ativação manual no painel Vercel permanece pendente.
 

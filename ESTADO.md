@@ -2,7 +2,7 @@
 
 ## Rastreamento de navegação — 2026-10-25
 
-Integrado Vercel Web Analytics globalmente no layout (`@vercel/analytics/react`). O rastreamento registra pageviews e navegação por rota sem criar dados pessoais no código. Para visualizar pelo iPhone, abrir o projeto DS Despachante no painel da Vercel e acessar Analytics; a ativação do recurso no projeto pode ser necessária uma única vez. TypeScript e build pendentes nesta alteração.
+Integrado Vercel Web Analytics globalmente no layout (`@vercel/analytics/react`). O rastreamento registra pageviews e navegação por rota sem criar dados pessoais no código. Deploy `dpl_AMazodC4GhTA6qisTxP7XHodP6kZ` está READY com o commit `3b377f7`. A consulta da API confirmou que Web Analytics ainda está desativado no projeto; é necessário ativá-lo uma vez no painel da Vercel para começar a coletar e visualizar os dados pelo iPhone.
 
 ## SEO local — Guarujá
 

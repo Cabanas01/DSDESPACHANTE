@@ -1,5 +1,9 @@
 # Estado do trabalho
 
+## Rastreamento de navegação — 2026-10-25
+
+Integrado Vercel Web Analytics globalmente no layout (`@vercel/analytics/react`). O rastreamento registra pageviews e navegação por rota sem criar dados pessoais no código. Para visualizar pelo iPhone, abrir o projeto DS Despachante no painel da Vercel e acessar Analytics; a ativação do recurso no projeto pode ser necessária uma única vez. TypeScript e build pendentes nesta alteração.
+
 ## SEO local — Guarujá
 
 Home com título/descrição locais, Open Graph/Twitter e JSON-LD LocalBusiness com endereço comercial, telefone, CNPJ, canais e catálogo dos oito serviços. Catálogo e detalhes de cursos agora têm metadados próprios, OG/Twitter e JSON-LD Course com preço e fornecedor; área administrativa marcada como noindex. Texto local em Sobre e Contato. Sem coordenadas, horários ou avaliações inventadas. TypeScript, 16 regressões, build e 2 testes do HTML gerado aprovados. Acesso a Search Console/GA4/Perfil da Empresa ainda não confirmado; Windsor.ai e Ahrefs sugeridos, sem instalação ou contratação pelo agente.

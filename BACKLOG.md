@@ -3,6 +3,7 @@
 - [x] Implementar SEO local na home: título, descrição, compartilhamento e LocalBusiness com dados informados.
 - [x] Validar dados estruturados e canônico no HTML gerado.
 - [ ] Medir consultas, impressões, cliques e desempenho local quando Search Console/Perfil da Empresa estiverem conectados.
+- [x] Integrar Vercel Web Analytics para acompanhar pageviews por rota no painel móvel da Vercel.
 
 - [x] Incluir busca por curso, normalização de acentos, contagem, estado vazio recuperável e filtros de 44 px.
 - [x] Aplicar endereço comercial, CNPJ, razão social, Facebook e serviços informados pelo usuário.

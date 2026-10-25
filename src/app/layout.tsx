@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dsdespachanteguaruja.com.br'),
@@ -33,6 +34,7 @@ export default function RootLayout({
       >
         <a href="#conteudo-principal" className="sr-only fixed left-4 top-4 z-[100] rounded-md bg-secondary px-4 py-3 font-bold text-secondary-foreground focus:not-sr-only focus:outline-none focus:ring-2 focus:ring-primary">Pular para o conteúdo principal</a>
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -2,7 +2,7 @@
 
 ## SEO local — Guarujá
 
-Home com título/descrição locais, Open Graph/Twitter e JSON-LD LocalBusiness com endereço comercial, telefone, CNPJ, canais e catálogo dos oito serviços. Texto local em Sobre e Contato. Sem coordenadas, horários ou avaliações inventadas. TypeScript, 16 regressões, build e 2 testes do HTML gerado aprovados. Acesso a Search Console/GA4/Perfil da Empresa ainda não confirmado; Windsor.ai e Ahrefs sugeridos, sem instalação ou contratação pelo agente.
+Home com título/descrição locais, Open Graph/Twitter e JSON-LD LocalBusiness com endereço comercial, telefone, CNPJ, canais e catálogo dos oito serviços. Catálogo e detalhes de cursos agora têm metadados próprios, OG/Twitter e JSON-LD Course com preço e fornecedor; área administrativa marcada como noindex. Texto local em Sobre e Contato. Sem coordenadas, horários ou avaliações inventadas. TypeScript, 16 regressões, build e 2 testes do HTML gerado aprovados. Acesso a Search Console/GA4/Perfil da Empresa ainda não confirmado; Windsor.ai e Ahrefs sugeridos, sem instalação ou contratação pelo agente.
 
 ## Busca de cursos e dados comerciais fornecidos pelo usuário
 

@@ -1,5 +1,7 @@
 # Testes
 
+2026-10-25 — SEO de cursos: `npm run typecheck` e `npm run build` aprovados após metadados OG/Twitter específicos para `/cursos` e detalhes, JSON-LD `Course` nos 28 detalhes e `noindex` na área administrativa. O build gerou 35 páginas; ainda não equivale a indexação ou ranking no Google.
+
 SEO local: TypeScript, 16 regressões e build aprovados; tests/seo-built.test.mjs passou em 2 testes contra HTML estático real, cobrindo título, descrição, canônico, OG e JSON-LD válido com contatos/endereço e oito serviços. A primeira expectativa de barra final foi ajustada à normalização equivalente do Next. Não equivale a aprovação do Rich Results Test nem comprova indexação/ranking do Google.
 
 Busca e dados comerciais: TypeScript, 16 testes existentes e build de 35 páginas aprovados. tests/catalog.browser.cjs via Playwright do runtime/Edge, TEST_BASE_URL=http://localhost:9029, passou em 390 e 1440 px: 28 resultados iniciais, MOPP, busca sem acento, vazio, limpeza, Atualização, aria-pressed, alvo de 44 px, ausência de overflow, detalhe e retorno ao catálogo. Tentativas iniciais revelaram ausência da sigla MOPP no nome completo (incluído ID na busca) e seletor de retorno incorreto no próprio teste (é botão); ambos corrigidos antes da aprovação.

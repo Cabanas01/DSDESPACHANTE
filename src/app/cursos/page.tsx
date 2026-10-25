@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   title: "Cursos de trânsito | DS Despachante Guarujá",
   description: "Conheça o catálogo de cursos de trânsito da DS Despachante Guarujá.",
   alternates: { canonical: "/cursos" },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "/cursos",
+    title: "Cursos de trânsito | DS Despachante Guarujá",
+    description: "MOPP, transporte escolar, reciclagem e outros cursos de trânsito. Consulte o catálogo da DS Despachante Guarujá.",
+    images: [{ url: "/image/cursos-transito.png", width: 1536, height: 864, alt: "Cursos de trânsito da DS Despachante Guarujá" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cursos de trânsito | DS Despachante Guarujá",
+    description: "Conheça o catálogo de cursos de trânsito da DS Despachante Guarujá.",
+    images: ["/image/cursos-transito.png"],
+  },
 };
 
 export default function CoursesPage() {

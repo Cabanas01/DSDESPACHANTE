@@ -21,10 +21,10 @@ export function InstitutionalHome() {
     <main id="conteudo-principal" className="min-h-screen bg-white">
       <Navbar />
 
-      <section id="inicio" className="relative isolate flex min-h-[690px] items-center overflow-hidden pt-20 text-white">
-        <Image src="/image/hero-car-guaruja.png" alt="Carro de passeio em avenida litorânea de Guarujá" fill priority className="-z-20 object-cover" sizes="100vw" />
+      <section id="inicio" className="relative isolate flex flex-col overflow-hidden bg-stone-950 pt-20 text-white sm:min-h-[690px] sm:justify-center">
+        <Image src="/image/hero-car-guaruja.png" alt="" fill priority className="-z-20 hidden object-cover sm:block" sizes="100vw" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(26,20,13,.96)_0%,rgba(26,20,13,.78)_45%,rgba(26,20,13,.25)_100%)]" />
-        <div className="container mx-auto grid gap-12 px-4 py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:py-28">
+        <div className="container mx-auto grid gap-12 px-4 pb-8 pt-10 sm:py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:py-28">
           <div className="max-w-2xl motion-safe:animate-fade-in-up">
             <p className="mb-5 text-xs font-bold uppercase tracking-[.18em] text-white/75">DS Despachante · Guarujá</p>
             <h1 className="text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-7xl">Seu veículo em dia.<br /><span className="text-secondary">Sua vida mais simples.</span></h1>
@@ -48,6 +48,10 @@ export function InstitutionalHome() {
               <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-black/70 p-4 backdrop-blur-md"><p className="text-xs font-bold uppercase tracking-[.16em] text-secondary">Praticidade para você</p><p className="mt-1 text-sm font-semibold text-white">Documentação, orientação e cursos em um só lugar.</p></div>
             </div>
           </div>
+        </div>
+        <div className="relative aspect-[16/9] w-full sm:hidden">
+          <Image src="/image/hero-car-guaruja.png" alt="Imagem ilustrativa de carro de passeio na orla" fill priority className="object-cover" sizes="100vw" />
+          <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-stone-950 to-transparent" />
         </div>
       </section>
 
@@ -103,10 +107,11 @@ export function InstitutionalHome() {
       </section>
 
       <section className="container mx-auto px-4 py-20 lg:py-24">
-        <div className="relative overflow-hidden rounded-3xl bg-primary px-7 py-10 text-white sm:px-12 sm:py-14">
-          <Image src="/image/cursos-transito.png" alt="Pessoa estudando conteúdo de trânsito online" fill className="object-cover opacity-35" sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/35" />
-          <div className="relative flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
+        <div className="grid overflow-hidden rounded-3xl bg-primary text-white md:grid-cols-[.9fr_1.1fr]">
+          <div className="relative min-h-60 md:min-h-80">
+            <Image src="/image/cursos-transito.png" alt="Imagem ilustrativa de pessoa estudando trânsito online" fill className="object-cover object-left" sizes="(min-width: 768px) 45vw, 100vw" />
+          </div>
+          <div className="flex flex-col items-start justify-center gap-7 px-7 py-10 sm:px-12 sm:py-14">
             <div className="max-w-xl"><p className="text-sm font-bold uppercase tracking-[.16em] text-white/70">Cursos de trânsito</p><h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Seu próximo passo começa aqui.</h2><p className="mt-3 text-white/80">Acesse a área de cursos da DS, com catálogo, detalhes e os links de inscrição atuais.</p></div>
             <Button size="lg" asChild className="shrink-0 bg-secondary text-secondary-foreground hover:bg-secondary/90"><Link href="/cursos">Acessar cursos <GraduationCap className="ml-2 size-5" /></Link></Button>
           </div>

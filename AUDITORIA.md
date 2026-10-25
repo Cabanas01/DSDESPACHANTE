@@ -1,5 +1,7 @@
 # Auditoria
 
+Revisão mobile-first: o hero anterior cortava o carro atrás do texto no celular; a camada de fundo no banner de cursos ocultava sua fotografia. Alteração restrita à apresentação da home: imagem própria abaixo do texto no celular e painel de fotografia ao lado/acima do CTA de cursos. Catálogo, preços e integrações não alterados. Prioridade de celular registrada por pedido explícito do usuário.
+
 2026-10-25 — verificação adicional via Edge headless confirmou cor escura do menu, fechamento por Escape, foco restaurado, ausência de overflow horizontal em celular/desktop e acesso ao catálogo. Build passou; screenshots locais gerados. Isso substitui a pendência funcional de navegador registrada abaixo, sem apagar a falha histórica da CUA.
 
 2026-10-25 — revisão do menu móvel encontrou texto herdado branco sobre painel branco após a mudança do cabeçalho. Aplicado `text-foreground` no painel e Escape com retorno de foco. A ferramenta de navegador falhou na inicialização com erro de assets; inspeção visual não executada nesta rodada. Correção ainda local, não publicada.

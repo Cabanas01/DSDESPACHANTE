@@ -1,5 +1,8 @@
 # Backlog
 
+- [x] Priorizar permanentemente celular e validar desktop como complemento.
+- [x] Corrigir corte do carro no hero móvel e tornar imagem de cursos visível em painel próprio.
+
 - [x] Validar contraste computado, Escape e foco do menu móvel via navegador real (Edge headless).
 - [x] Build da correção e verificação de overflow em 390 e 1440 px.
 

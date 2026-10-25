@@ -1,5 +1,7 @@
 # Testes
 
+Revisão mobile-first: TypeScript, 16 testes e build de 35 páginas passaram. Playwright/Edge: 360/390/768 px sem overflow e com todas as imagens visíveis carregadas; 1440 px com hero renderizado e sem overflow. Captura ux-home-390.png inspecionada. Captura completa de desktop com decodificação de todas as imagens não terminou; a checagem de desktop foi feita em execução separada e captura do topo.
+
 2026-10-25 — Edge headless/Playwright em produção local (porta 9022): painel móvel 390×844 visível com cor computada rgb(26,26,26); Escape fechou o painel e retornou foco ao botão. Sem overflow horizontal em 390 e 1440 px; catálogo abriu com título correto. Build de 35 páginas aprovado. Evidências visuais locais: mobile-ux-review.png e desktop-ux-review.png.
 
 2026-10-25 — correção local do menu: TypeScript e 16 testes existentes aprovados. Esses testes não verificam a interação de teclado nem o contraste renderizado; validação no navegador pendente.

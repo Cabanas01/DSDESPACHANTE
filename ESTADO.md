@@ -1,5 +1,9 @@
 # Estado do trabalho
 
+## Prioridade permanente: mobile primeiro
+
+Pedido confirmado pelo usuário: priorizar celular, mantendo desktop. Nova revisão separa o carro do texto abaixo de 640 px e apresenta a imagem dos cursos em painel próprio, sem escurecimento excessivo. Typecheck, 16 testes e build aprovados. Edge headless: imagens visíveis carregadas e sem overflow em 360, 390 e 768 px; hero renderizado e sem overflow em 1440 px. Screenshot mobile inspecionado. Publicação desta revisão em andamento.
+
 Atualização do ciclo de menu: validação funcional em navegador concluída via Playwright com Edge headless; build aprovado. Correção pronta para publicação. A falha anterior da ferramenta CUA foi contornada com navegador automatizado local.
 
 ## Ciclo UX/UI — 2026-10-25

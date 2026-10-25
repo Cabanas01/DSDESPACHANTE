@@ -32,6 +32,8 @@
 - [x] Validar typecheck, build e regressão de cursos.
 - [x] Publicar esta nova revisão em produção.
 - [x] Ajustar o cabeçalho para o padrão escuro sobre o hero da referência visual.
+- [x] Aproximar a home da proposta visual com faixa “Como funciona” e imagem de atendimento.
+- [ ] Publicar esta atualização da proposta visual.
 
 ## Dados pendentes (não usar como conteúdo)
 

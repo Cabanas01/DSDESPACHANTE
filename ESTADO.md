@@ -32,6 +32,10 @@ Concluída. A home institucional recebeu uma composição visual com imagem no h
 
 Concluída. A imagem de caminhão foi substituída por uma imagem de carro de passeio na orla de Guarujá. Também foram adicionadas imagens específicas de documentação veicular e estudo de trânsito, aplicadas nas seções Sobre e Cursos, e o cabeçalho foi ajustado para o padrão escuro da referência enviada. Typecheck, build e 16 testes passaram. O deployment de produção `dpl_A4yTpreo3q8wrfytADANjo839viC` está READY e a home confirma os três novos assets.
 
+### Proposta visual detalhada — 2026-10-25
+
+Em andamento. A home foi aproximada da proposta enviada com ordem de serviços, faixa “Como funciona” em quatro etapas e imagem de atendimento humano na seção Sobre. Typecheck, build e 16 testes passaram; falta publicar esta atualização.
+
 Prévia hospedada e publicação permanecem pendentes: não há configuração de hospedagem no repositório. O domínio atual respondeu `Server: Vercel`, confirmando que ele já é servido pela plataforma. A conexão Vercel disponível retornou a conta incorreta (`dinheirodegraca013@gmail.com`) e não possui projeto identificado como DS Despachante (apenas `nexusteste`), que não será reutilizado. A tela de login foi aberta para a conta informada pelo usuário (`GuiTabanas3@gmail.com`); a próxima ação é autenticar essa conta e localizar o projeto correto. A versão local passou em testes, tipos, build e fluxo de retorno ao catálogo em servidor de produção local.
 
 Checagem final: a tela da Vercel permanece no login, sem sessão autenticada. Nenhuma prévia hospedada, publicação, alteração de DNS ou produção foi realizada.

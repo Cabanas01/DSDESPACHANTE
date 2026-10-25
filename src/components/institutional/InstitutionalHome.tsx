@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button";
 import { BRAND, LINKS } from "@/lib/constants";
 
 const services = [
-  { title: "Licenciamento", description: "Orientação para manter a documentação do veículo regularizada.", icon: ClipboardList },
   { title: "Transferência de veículo", description: "Atendimento para as etapas de transferência do seu veículo.", icon: CarFront },
+  { title: "Licenciamento", description: "Orientação para manter a documentação do veículo regularizada.", icon: ClipboardList },
   { title: "IPVA e débitos", description: "Consulte e organize pendências relacionadas ao seu veículo.", icon: CircleDollarSign },
   { title: "Documentação veicular", description: "Apoio para entender a documentação necessária ao seu processo.", icon: FileText },
 ];
@@ -69,10 +69,19 @@ export function InstitutionalHome() {
         </div>
       </section>
 
+      <section className="bg-stone-50 py-16 lg:py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[.16em] text-secondary-foreground">Como funciona</p><h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Da primeira mensagem à documentação resolvida.</h2><p className="mt-3 text-muted-foreground">Um processo simples, transparente e acompanhado pela equipe.</p></div>
+          <div className="mt-10 grid gap-4 md:grid-cols-4">
+            {[['01', 'Você nos procura', 'Fale pelo WhatsApp ou escolha um serviço.'], ['02', 'Entendemos seu caso', 'Analisamos os documentos e orientamos o próximo passo.'], ['03', 'Cuidamos do processo', 'Você recebe acompanhamento conforme a necessidade.'], ['04', 'Você recebe a confirmação', 'Concluímos com clareza e tranquilidade.']].map(([number, title, description], index) => <div key={number} className="relative rounded-2xl border border-border bg-white p-5 shadow-sm"><span className="grid size-9 place-items-center rounded-full bg-secondary font-black text-secondary-foreground">{number}</span><h3 className="mt-5 font-bold">{title}</h3><p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>{index < 3 && <ArrowRight className="absolute -right-3 top-9 z-10 hidden size-5 text-secondary md:block" aria-hidden="true" />}</div>)}
+          </div>
+        </div>
+      </section>
+
       <section id="sobre" className="scroll-mt-20 bg-stone-50 py-20 lg:py-24">
         <div className="container mx-auto grid gap-10 px-4 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
           <div className="relative min-h-[390px] overflow-hidden rounded-3xl bg-primary shadow-xl">
-            <Image src="/image/documentacao-carro.png" alt="Documentação veicular organizada ao lado de um carro" fill className="object-cover opacity-75" sizes="(min-width: 1024px) 43vw, 100vw" />
+            <Image src="/image/atendimento-ds.png" alt="Atendimento para documentação veicular" fill className="object-cover opacity-85" sizes="(min-width: 1024px) 43vw, 100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/35 to-transparent" />
             <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-white/20 bg-black/35 p-5 backdrop-blur-sm"><Image src="/image/logo.png" alt="Logo da DS Despachante Guarujá" width={76} height={76} className="size-16 object-contain" /><p className="mt-4 text-lg font-bold text-white">Atendimento próximo, informação clara.</p><p className="mt-1 text-sm text-white/75">Uma identidade local com a praticidade de resolver online.</p></div>
           </div>

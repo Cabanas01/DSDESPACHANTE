@@ -1,5 +1,7 @@
 # Backlog
 
+- [x] Fazer destaque do menu acompanhar seção visível no celular e desktop, preservando estado ativo dos cursos.
+
 - [x] Aplicar preferência atual: dourado/amarelo predominante, preto e branco de apoio, baseada na fachada enviada.
 - [x] Ampliar serviços para 44 px e CTAs da abertura para 48 px.
 - [x] Garantir rolagem interna do menu em celular horizontal.

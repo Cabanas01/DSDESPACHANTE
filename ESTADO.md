@@ -1,5 +1,9 @@
 # Estado do trabalho
 
+## Navegação por seção — 2026-10-25
+
+Corrigido destaque que permanecia em Início durante toda a rolagem: agora acompanha Serviços, Sobre e Contato na home; Cursos permanece ativo no catálogo e detalhe. Atualizações agrupadas por requestAnimationFrame, listener passivo e limpeza ao sair da home. TypeScript, 16 testes e build passaram. Edge headless validou quatro seções em 390 e 1440 px e detalhe de curso; publicação em andamento.
+
 ## Identidade atual — amarelo/dourado da fachada
 
 Pedido do usuário substitui a preferência anterior por marrom: amarelo/dourado predominante com preto e branco. Cabeçalho amarelo, cursos amarelos com texto preto, cards com faixa dourada e áreas escuras neutras. Mobile segue prioritário. Também corrigidos links de serviço (44 px), CTAs do hero (48 px) e menu horizontal com rolagem interna. Build, TypeScript e 16 testes aprovados. Navegador local: 360/390/768/1440 px sem overflow; menu 667×375 cabe na viewport e CTA acessível. Publicação desta revisão em andamento.

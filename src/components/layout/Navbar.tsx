@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
@@ -20,8 +20,37 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
+  const [activeSection, setActiveSection] = useState("inicio");
   const closeMenu = () => setIsMenuOpen(false);
-  const isActive = (href: string) => href === "/cursos" ? pathname.startsWith("/cursos") : href === "/" && pathname === "/";
+  const isActive = (href: string) => href === "/cursos"
+    ? pathname.startsWith("/cursos")
+    : pathname === "/" && (href === "/" ? activeSection === "inicio" : href === `/#${activeSection}`);
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+    const sections = ["inicio", "servicos", "sobre", "contato"];
+    let frame = 0;
+    const updateSection = () => {
+      frame = 0;
+      let current = "inicio";
+      for (const id of sections) {
+        const section = document.getElementById(id);
+        if (section && section.getBoundingClientRect().top <= 100) current = id;
+      }
+      setActiveSection(current);
+    };
+    const scheduleUpdate = () => {
+      if (!frame) frame = requestAnimationFrame(updateSection);
+    };
+    updateSection();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      cancelAnimationFrame(frame);
+    };
+  }, [pathname]);
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-secondary text-secondary-foreground shadow-sm" aria-label="Navegação principal" onKeyDown={(event) => {

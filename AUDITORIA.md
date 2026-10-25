@@ -1,5 +1,7 @@
 # Auditoria
 
+Navegação por seção: detecção anterior usava somente pathname e marcava Início mesmo em Sobre. Agora usa posição das quatro seções da home relativa ao cabeçalho de 80 px, com margem de 20 px. Listener de rolagem passivo, uma atualização por frame e cleanup no efeito. Testada ida e volta entre as quatro seções em mobile e desktop; catálogo permanece independente.
+
 Revisão de identidade: foto da fachada fornecida pelo usuário estabelece amarelo/dourado, preto e branco como direção atual; valores adotados são de implementação e não declarados códigos oficiais. Variáveis primárias antes marrons agora neutras escuras para manter texto branco legível; blocos dourados usam texto preto. Herança compartilhada altera apresentação dos cursos, sem mudar seu catálogo. Corrigida classe h-13 inexistente, que resultava em CTAs estreitos; menu antes terminava em y=433 numa viewport de 375, agora tem limite dinâmico e rolagem interna.
 
 Revisão mobile-first: o hero anterior cortava o carro atrás do texto no celular; a camada de fundo no banner de cursos ocultava sua fotografia. Alteração restrita à apresentação da home: imagem própria abaixo do texto no celular e painel de fotografia ao lado/acima do CTA de cursos. Catálogo, preços e integrações não alterados. Prioridade de celular registrada por pedido explícito do usuário.

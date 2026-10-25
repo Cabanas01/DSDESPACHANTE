@@ -29,3 +29,4 @@
 | 2026-10-24 | Checkout Bludata | As 28 URLs de inscrição foram consultadas em leitura com redirecionamentos permitidos; todas responderam HTTP 200, sem iniciar compra ou pagamento. |
 | 2026-10-24 | Catálogo e detalhe no navegador | Em produção local, o filtro Atualização exibiu apenas cursos dessa categoria; o detalhe de `mopp-atualizacao` apresentou preço, links Bludata e WhatsApp; “Voltar ao catálogo” abriu `/cursos#cursos`. |
 | 2026-10-24 | Lint existente | `npm run lint` não é não interativo: abriu o assistente de configuração do Next.js porque não há ESLint nem arquivo de regras no repositório. Não foi tratado como teste aprovado. |
+| 2026-10-25 | Refresh visual | `npm run typecheck`, `npm run build` e `node --test tests/routing.test.mjs`: 16 de 16 testes aprovados; 35 páginas estáticas geradas. |

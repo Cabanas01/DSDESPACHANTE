@@ -9,6 +9,12 @@
 
 ## Riscos conhecidos
 
+### Revisão visual de 2026-10-25
+
+- Foram usadas imagens locais do repositório; não foram adicionadas imagens de terceiros como se fossem instalações ou equipe reais.
+- O Instagram foi usado como fonte pública de posicionamento e link oficial; o feed não foi copiado por não estar disponível de forma estável no HTML público.
+- Os dados conflitantes encontrados em diretórios externos não foram incorporados ao site.
+
 - `next.config.ts` ignora erros de TypeScript e ESLint no build; a validação deve executar `npm run typecheck` explicitamente.
 - O repositório declara Firebase, mas a auditoria de imports não encontrou integração ativa na aplicação.
 - A instalação inicial de `node_modules` estava incompleta. Ela foi isolada de forma recuperável em `.node_modules-corrupt-20261024` e reinstalada pelo `package-lock.json`.

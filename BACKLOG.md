@@ -13,6 +13,16 @@
 - [ ] Preparar prévia — projeto correto `dsdespachante` localizado e conta `cabanas01` autenticada. A Vercel está liberada, mas falta permissão de escrita no GitHub para enviar a branch de preview.
 - [ ] Migrar o lint interativo legado do Next.js para ESLint CLI — pendente de decisão para adicionar dependência e regras ao repositório.
 
+## Task de melhoria visual — 2026-10-25
+
+- [x] Atualizar composição visual do hero com imagem principal e painel complementar.
+- [x] Melhorar cards de serviços e seção Sobre com imagem real da identidade existente.
+- [x] Adicionar chamada para o Instagram oficial `@dsdespachante_`.
+- [x] Corrigir URL do Instagram no rodapé e nos CTAs.
+- [x] Preservar a área `/cursos` e seus 28 cursos.
+- [x] Validar typecheck, build e regressão automatizada.
+- [ ] Publicar a revisão em produção e verificar o domínio.
+
 ## Dados pendentes (não usar como conteúdo)
 
 - Horário de atendimento e telefone adicional, caso existam.

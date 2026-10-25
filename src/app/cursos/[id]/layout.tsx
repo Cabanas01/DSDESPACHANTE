@@ -52,23 +52,33 @@ export default async function CourseLayout({ children, params }: CourseLayoutPro
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Course",
-    name: course.name,
-    description: course.description,
-    url: `https://dsdespachanteguaruja.com.br/cursos/${course.id}`,
-    image: `https://dsdespachanteguaruja.com.br${course.image}`,
-    provider: {
-      "@type": "Organization",
-      name: "DS Despachante Guarujá",
-      url: "https://dsdespachanteguaruja.com.br",
+    "@graph": [{
+      "@type": "Course",
+      name: course.name,
+      description: course.description,
+      url: `https://dsdespachanteguaruja.com.br/cursos/${course.id}`,
+      image: `https://dsdespachanteguaruja.com.br${course.image}`,
+      provider: {
+        "@type": "Organization",
+        name: "DS Despachante Guarujá",
+        url: "https://dsdespachanteguaruja.com.br",
+      },
+      offers: {
+        "@type": "Offer",
+        price: course.price.toFixed(2),
+        priceCurrency: "BRL",
+        url: course.purchaseUrl,
+        availability: "https://schema.org/InStock",
+      },
     },
-    offers: {
-      "@type": "Offer",
-      price: course.price.toFixed(2),
-      priceCurrency: "BRL",
-      url: course.purchaseUrl,
-      availability: "https://schema.org/InStock",
-    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Início", item: "https://dsdespachanteguaruja.com.br/" },
+        { "@type": "ListItem", position: 2, name: "Cursos", item: "https://dsdespachanteguaruja.com.br/cursos" },
+        { "@type": "ListItem", position: 3, name: course.name, item: `https://dsdespachanteguaruja.com.br/cursos/${course.id}` },
+      ],
+    }],
   };
 
   return <>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} /></>;

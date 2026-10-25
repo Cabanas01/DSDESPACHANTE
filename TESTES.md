@@ -1,5 +1,7 @@
 # Testes
 
+SEO local: TypeScript, 16 regressões e build aprovados; tests/seo-built.test.mjs passou em 2 testes contra HTML estático real, cobrindo título, descrição, canônico, OG e JSON-LD válido com contatos/endereço e oito serviços. A primeira expectativa de barra final foi ajustada à normalização equivalente do Next. Não equivale a aprovação do Rich Results Test nem comprova indexação/ranking do Google.
+
 Busca e dados comerciais: TypeScript, 16 testes existentes e build de 35 páginas aprovados. tests/catalog.browser.cjs via Playwright do runtime/Edge, TEST_BASE_URL=http://localhost:9029, passou em 390 e 1440 px: 28 resultados iniciais, MOPP, busca sem acento, vazio, limpeza, Atualização, aria-pressed, alvo de 44 px, ausência de overflow, detalhe e retorno ao catálogo. Tentativas iniciais revelaram ausência da sigla MOPP no nome completo (incluído ID na busca) e seletor de retorno incorreto no próprio teste (é botão); ambos corrigidos antes da aprovação.
 
 Navegação por seção: antes da correção, scroll até Sobre mantinha Início ativo em produção. Após correção, Playwright/Edge local validou Serviços/Sobre/Contato/Início em 390 e 1440 px com espera pelo aria-current esperado; detalhe mopp-atualizacao marcou Cursos. TypeScript, 16 testes de regressão e build com 35 páginas aprovados.

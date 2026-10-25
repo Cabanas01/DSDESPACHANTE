@@ -1,5 +1,9 @@
 # Backlog
 
+- [x] Incluir busca por curso, normalização de acentos, contagem, estado vazio recuperável e filtros de 44 px.
+- [x] Aplicar endereço comercial, CNPJ, razão social, Facebook e serviços informados pelo usuário.
+- [x] Validar busca, filtro, detalhe e retorno no navegador mobile e desktop.
+
 - [x] Fazer destaque do menu acompanhar seção visível no celular e desktop, preservando estado ativo dos cursos.
 
 - [x] Aplicar preferência atual: dourado/amarelo predominante, preto e branco de apoio, baseada na fachada enviada.

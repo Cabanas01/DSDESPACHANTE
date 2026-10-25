@@ -10,7 +10,11 @@ const services = [
   { title: "Transferência de veículo", description: "Atendimento para as etapas de transferência do seu veículo.", icon: CarFront },
   { title: "Licenciamento", description: "Orientação para manter a documentação do veículo regularizada.", icon: ClipboardList },
   { title: "IPVA e débitos", description: "Consulte e organize pendências relacionadas ao seu veículo.", icon: CircleDollarSign },
-  { title: "Documentação veicular", description: "Apoio para entender a documentação necessária ao seu processo.", icon: FileText },
+  { title: "Documentação e CRLV-e", description: "Emissão de CRLV-e e orientação para regularização documental.", icon: FileText },
+  { title: "Renovação de CNH", description: "Orientação sobre as etapas e os documentos para renovar sua habilitação.", icon: BadgeCheck },
+  { title: "Multas e recursos", description: "Análise de autuações, defesa prévia e recursos administrativos à JARI e ao CETRAN.", icon: ClipboardList },
+  { title: "Suspensão e cassação", description: "Atendimento para defesa em processos relacionados ao direito de dirigir.", icon: ShieldCheck },
+  { title: "Indicação de condutor", description: "Orientação para identificar o condutor responsável conforme o seu caso.", icon: CarFront },
 ];
 
 const contactFor = (service: string) =>

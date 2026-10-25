@@ -1,5 +1,9 @@
 # Estado do trabalho
 
+## Busca de cursos e dados comerciais fornecidos pelo usuário
+
+Catálogo com pesquisa por nome/descrição/categoria/identificador, normalização de acentos, contagem anunciada, filtros selecionáveis de 44 px e ação para limpar busca vazia. Endereço atualizado para Alameda das Tulipas, 214, loja 1, Santo Antônio; CEP 11432-250. Rodapé com razão social e CNPJ informados pelo usuário; Facebook corrigido. Serviços ampliados para oito, incluindo CNH, multas/recursos, suspensão/cassação e indicação de condutor. Dados societários adicionais e condições de parcelamento não publicados. TypeScript, 16 testes e build aprovados. Novo teste de navegador em tests/catalog.browser.cjs passou em 390 e 1440 px. Publicação em andamento.
+
 ## Navegação por seção — 2026-10-25
 
 Corrigido destaque que permanecia em Início durante toda a rolagem: agora acompanha Serviços, Sobre e Contato na home; Cursos permanece ativo no catálogo e detalhe. Atualizações agrupadas por requestAnimationFrame, listener passivo e limpeza ao sair da home. TypeScript, 16 testes e build passaram. Edge headless validou quatro seções em 390 e 1440 px e detalhe de curso; publicação em andamento.

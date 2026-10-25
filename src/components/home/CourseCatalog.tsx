@@ -5,7 +5,7 @@ import { COURSES, type Course } from "@/lib/courses";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { LINKS } from "@/lib/constants";
-import { ExternalLink, MessageCircle, Info, ChevronRight } from "lucide-react";
+import { MessageCircle, Search } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -19,6 +19,7 @@ function CourseCard({ course }: { course: Course }) {
             src={course.image} 
             alt={course.name} 
             fill 
+            sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
         </Link>
@@ -67,15 +68,19 @@ function CourseCard({ course }: { course: Course }) {
 
 export function CourseCatalog() {
   const [activeCategory, setActiveCategory] = useState<string>("Todos");
+  const [search, setSearch] = useState("");
   
   const categories = ["Todos", "Formação", "Atualização", "Cursos Livres", "Treinamento Profissional", "Normas Regulamentadoras", "Reciclagem e Outros"];
   
-  const filteredCourses = activeCategory === "Todos" 
-    ? COURSES 
-    : COURSES.filter(c => c.category.includes(activeCategory));
+  const normalize = (value: string) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+  const query = normalize(search);
+  const filteredCourses = COURSES.filter((course) =>
+    (activeCategory === "Todos" || course.category.includes(activeCategory)) &&
+    normalize(`${course.id} ${course.name} ${course.category} ${course.description}`).includes(query)
+  );
 
   return (
-    <section id="cursos" className="py-20 md:py-24 bg-white">
+    <section id="cursos" className="scroll-mt-24 py-20 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mb-12">
           <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
@@ -86,14 +91,22 @@ export function CourseCatalog() {
           </p>
         </div>
 
-        {/* Categories Filter - Optimized for Mobile Scroll */}
-        <div className="flex overflow-x-auto pb-4 gap-2 mb-12 no-scrollbar -mx-4 px-4 md:mx-0 md:px-0 scroll-smooth">
+        <div className="mb-6 max-w-2xl">
+          <label htmlFor="course-search" className="mb-2 block text-sm font-bold">Qual curso você procura?</label>
+          <div className="relative">
+            <Search aria-hidden="true" className="pointer-events-none absolute left-4 top-4 size-5 text-muted-foreground" />
+            <input id="course-search" type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Busque por MOPP, escolar, reciclagem..." aria-controls="course-results" className="min-h-14 w-full rounded-xl border border-border bg-white py-3 pl-12 pr-4 text-base outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary" />
+          </div>
+        </div>
+        <div role="group" aria-label="Filtrar cursos por categoria" className="flex overflow-x-auto pb-4 gap-2 mb-4 -mx-4 px-4 md:mx-0 md:px-0">
           {categories.map((cat) => (
             <Button 
               key={cat} 
               variant={activeCategory === cat ? "default" : "outline"}
               onClick={() => setActiveCategory(cat)}
-              className={`rounded-full text-[10px] font-bold uppercase tracking-wider whitespace-nowrap px-6 h-9 ${activeCategory === cat ? 'bg-primary' : 'hover:border-primary'}`}
+              aria-pressed={activeCategory === cat}
+              aria-controls="course-results"
+              className={`shrink-0 rounded-full text-xs font-bold whitespace-nowrap px-5 h-11 ${activeCategory === cat ? 'bg-primary' : 'hover:border-primary'}`}
               size="sm"
             >
               {cat}
@@ -101,7 +114,8 @@ export function CourseCatalog() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <p role="status" aria-live="polite" aria-atomic="true" className="mb-6 text-sm text-muted-foreground">{filteredCourses.length} {filteredCourses.length === 1 ? "curso encontrado" : "cursos encontrados"}</p>
+        <div id="course-results" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredCourses.map((course) => (
             <CourseCard key={course.id} course={course} />
           ))}
@@ -109,7 +123,9 @@ export function CourseCatalog() {
         
         {filteredCourses.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-muted-foreground font-medium">Nenhum curso encontrado nesta categoria.</p>
+            <p className="font-bold">Nenhum curso encontrado.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Tente outro nome ou limpe os filtros para ver todos os cursos.</p>
+            <Button className="mt-5 min-h-11" onClick={() => { setSearch(""); setActiveCategory("Todos"); }}>Limpar busca e filtros</Button>
           </div>
         )}
       </div>

@@ -1,5 +1,7 @@
 # Auditoria
 
+Dados comerciais: fonte desta atualização é a mensagem do usuário contendo endereço comercial, razão social, CNPJ, canais e serviços. Nenhuma confirmação cadastral independente adicional foi feita nesta rodada. Não confundir endereço comercial com cadastral; apenas o comercial foi publicado. Datas de abertura, quadro societário, registro profissional histórico, condições de parcelamento e credenciamento atual não foram acrescentados. src/lib/courses.ts permanece sem alteração. Busca filtra apenas o catálogo em memória, sem enviar consultas para terceiros.
+
 Navegação por seção: detecção anterior usava somente pathname e marcava Início mesmo em Sobre. Agora usa posição das quatro seções da home relativa ao cabeçalho de 80 px, com margem de 20 px. Listener de rolagem passivo, uma atualização por frame e cleanup no efeito. Testada ida e volta entre as quatro seções em mobile e desktop; catálogo permanece independente.
 
 Revisão de identidade: foto da fachada fornecida pelo usuário estabelece amarelo/dourado, preto e branco como direção atual; valores adotados são de implementação e não declarados códigos oficiais. Variáveis primárias antes marrons agora neutras escuras para manter texto branco legível; blocos dourados usam texto preto. Herança compartilhada altera apresentação dos cursos, sem mudar seu catálogo. Corrigida classe h-13 inexistente, que resultava em CTAs estreitos; menu antes terminava em y=433 numa viewport de 375, agora tem limite dinâmico e rolagem interna.

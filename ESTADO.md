@@ -1,5 +1,11 @@
 # Estado do trabalho
 
+Atualização do ciclo de menu: validação funcional em navegador concluída via Playwright com Edge headless; build aprovado. Correção pronta para publicação. A falha anterior da ferramenta CUA foi contornada com navegador automatizado local.
+
+## Ciclo UX/UI — 2026-10-25
+
+Correção local do contraste do menu móvel; Escape fecha o painel e retorna o foco ao botão. Typecheck e 16 testes existentes passaram. Validação visual, build e publicação desta correção pendentes.
+
 ## Implementado localmente
 
 - A raiz `/` agora apresenta a página institucional.

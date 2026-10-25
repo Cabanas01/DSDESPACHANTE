@@ -1,5 +1,11 @@
 # Backlog
 
+- [x] Validar contraste computado, Escape e foco do menu móvel via navegador real (Edge headless).
+- [x] Build da correção e verificação de overflow em 390 e 1440 px.
+
+- [x] Corrigir herança de texto branco no menu móvel e implementar Escape com retorno de foco.
+- [ ] Validar visualmente e publicar a correção do menu móvel.
+
 - [x] Migrar catálogo atual para `/cursos`.
 - [x] Criar home institucional e navegação.
 - [x] Implementar responsividade, acessibilidade, animações e SEO básico.

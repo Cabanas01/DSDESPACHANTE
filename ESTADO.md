@@ -1,5 +1,9 @@
 # Estado do trabalho
 
+## Identidade atual — amarelo/dourado da fachada
+
+Pedido do usuário substitui a preferência anterior por marrom: amarelo/dourado predominante com preto e branco. Cabeçalho amarelo, cursos amarelos com texto preto, cards com faixa dourada e áreas escuras neutras. Mobile segue prioritário. Também corrigidos links de serviço (44 px), CTAs do hero (48 px) e menu horizontal com rolagem interna. Build, TypeScript e 16 testes aprovados. Navegador local: 360/390/768/1440 px sem overflow; menu 667×375 cabe na viewport e CTA acessível. Publicação desta revisão em andamento.
+
 ## Prioridade permanente: mobile primeiro
 
 Pedido confirmado pelo usuário: priorizar celular, mantendo desktop. Nova revisão separa o carro do texto abaixo de 640 px e apresenta a imagem dos cursos em painel próprio, sem escurecimento excessivo. Typecheck, 16 testes e build aprovados. Edge headless: imagens visíveis carregadas e sem overflow em 360, 390 e 768 px; hero renderizado e sem overflow em 1440 px. Screenshot mobile inspecionado. Publicação desta revisão em andamento.

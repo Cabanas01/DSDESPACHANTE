@@ -23,17 +23,17 @@ export function InstitutionalHome() {
 
       <section id="inicio" className="relative isolate flex flex-col overflow-hidden bg-stone-950 pt-20 text-white sm:min-h-[690px] sm:justify-center">
         <Image src="/image/hero-car-guaruja.png" alt="" fill priority className="-z-20 hidden object-cover sm:block" sizes="100vw" />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(26,20,13,.96)_0%,rgba(26,20,13,.78)_45%,rgba(26,20,13,.25)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(15,15,15,.96)_0%,rgba(15,15,15,.78)_45%,rgba(15,15,15,.25)_100%)]" />
         <div className="container mx-auto grid gap-12 px-4 pb-8 pt-10 sm:py-20 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:py-28">
           <div className="max-w-2xl motion-safe:animate-fade-in-up">
             <p className="mb-5 text-xs font-bold uppercase tracking-[.18em] text-white/75">DS Despachante · Guarujá</p>
             <h1 className="text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-7xl">Seu veículo em dia.<br /><span className="text-secondary">Sua vida mais simples.</span></h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/90">Conte com a DS para simplificar a documentação do seu veículo, com atendimento direto quando você precisar.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button size="lg" asChild className="h-13 bg-secondary px-7 text-base font-bold text-secondary-foreground hover:bg-secondary/90">
+              <Button size="lg" asChild className="h-12 bg-secondary px-7 text-base font-bold text-secondary-foreground hover:bg-secondary/90">
                 <Link href={LINKS.INSTITUTIONAL_WHATSAPP} target="_blank" rel="noopener noreferrer"><MessageCircle className="mr-2 size-5" />Falar com a DS</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="h-13 border-white/80 bg-transparent px-7 text-base font-bold text-white hover:bg-white hover:text-primary">
+              <Button size="lg" variant="outline" asChild className="h-12 border-white/80 bg-transparent px-7 text-base font-bold text-white hover:bg-white hover:text-primary">
                 <Link href="#servicos">Conhecer serviços</Link>
               </Button>
             </div>
@@ -61,19 +61,19 @@ export function InstitutionalHome() {
           <h2 className="max-w-xl text-3xl font-extrabold tracking-tight sm:text-4xl">Como podemos ajudar?</h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map(({ title, description, icon: Icon }) => (
-              <article key={title} className="group relative overflow-hidden rounded-2xl border border-border bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-secondary hover:shadow-lg">
+              <article key={title} className="group relative overflow-hidden rounded-2xl border border-border border-t-4 border-t-secondary bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-secondary hover:shadow-lg">
                 <span className="absolute right-5 top-5 grid size-8 place-items-center rounded-full bg-accent text-secondary-foreground"><ArrowRight className="size-4" /></span>
                 <Icon className="size-9 text-secondary" aria-hidden="true" />
                 <h3 className="mt-5 text-lg font-bold text-foreground">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
-                <Link href={contactFor(title)} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center text-sm font-bold text-primary underline-offset-4 hover:text-secondary-foreground hover:underline">Falar sobre este serviço <ArrowRight className="ml-1 size-4" /></Link>
+                <Link href={contactFor(title)} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center rounded-md px-1 text-sm font-bold text-primary underline-offset-4 hover:text-secondary-foreground hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">Falar sobre este serviço <ArrowRight className="ml-1 size-4" /></Link>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-stone-50 py-16 lg:py-20">
+      <section className="bg-accent py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl"><p className="text-sm font-bold uppercase tracking-[.16em] text-secondary-foreground">Como funciona</p><h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Da primeira mensagem à documentação resolvida.</h2><p className="mt-3 text-muted-foreground">Um processo simples, transparente e acompanhado pela equipe.</p></div>
           <div className="mt-10 grid gap-4 md:grid-cols-4">
@@ -107,13 +107,13 @@ export function InstitutionalHome() {
       </section>
 
       <section className="container mx-auto px-4 py-20 lg:py-24">
-        <div className="grid overflow-hidden rounded-3xl bg-primary text-white md:grid-cols-[.9fr_1.1fr]">
+        <div className="grid overflow-hidden rounded-3xl bg-secondary text-secondary-foreground md:grid-cols-[.9fr_1.1fr]">
           <div className="relative min-h-60 md:min-h-80">
             <Image src="/image/cursos-transito.png" alt="Imagem ilustrativa de pessoa estudando trânsito online" fill className="object-cover object-left" sizes="(min-width: 768px) 45vw, 100vw" />
           </div>
           <div className="flex flex-col items-start justify-center gap-7 px-7 py-10 sm:px-12 sm:py-14">
-            <div className="max-w-xl"><p className="text-sm font-bold uppercase tracking-[.16em] text-white/70">Cursos de trânsito</p><h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Seu próximo passo começa aqui.</h2><p className="mt-3 text-white/80">Acesse a área de cursos da DS, com catálogo, detalhes e os links de inscrição atuais.</p></div>
-            <Button size="lg" asChild className="shrink-0 bg-secondary text-secondary-foreground hover:bg-secondary/90"><Link href="/cursos">Acessar cursos <GraduationCap className="ml-2 size-5" /></Link></Button>
+            <div className="max-w-xl"><p className="text-sm font-bold uppercase tracking-[.16em]">Cursos de trânsito</p><h2 className="mt-3 text-3xl font-extrabold sm:text-4xl">Seu próximo passo começa aqui.</h2><p className="mt-3">Acesse a área de cursos da DS, com catálogo, detalhes e os links de inscrição atuais.</p></div>
+            <Button size="lg" asChild className="shrink-0 bg-primary text-white hover:bg-primary/90"><Link href="/cursos">Acessar cursos <GraduationCap className="ml-2 size-5" /></Link></Button>
           </div>
         </div>
       </section>

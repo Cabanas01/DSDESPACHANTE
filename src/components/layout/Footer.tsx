@@ -5,7 +5,7 @@ import { BRAND, LINKS } from "@/lib/constants";
 
 export function Footer() {
   return (
-    <footer className="bg-primary pb-8 pt-16 text-white">
+    <footer className="border-t-4 border-secondary bg-primary pb-8 pt-16 text-white">
       <div className="container mx-auto px-4">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>

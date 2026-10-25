@@ -1,5 +1,9 @@
 # Backlog
 
+- [x] Aplicar preferência atual: dourado/amarelo predominante, preto e branco de apoio, baseada na fachada enviada.
+- [x] Ampliar serviços para 44 px e CTAs da abertura para 48 px.
+- [x] Garantir rolagem interna do menu em celular horizontal.
+
 - [x] Priorizar permanentemente celular e validar desktop como complemento.
 - [x] Corrigir corte do carro no hero móvel e tornar imagem de cursos visível em painel próprio.
 

@@ -1,5 +1,7 @@
 # Auditoria
 
+Revisão de identidade: foto da fachada fornecida pelo usuário estabelece amarelo/dourado, preto e branco como direção atual; valores adotados são de implementação e não declarados códigos oficiais. Variáveis primárias antes marrons agora neutras escuras para manter texto branco legível; blocos dourados usam texto preto. Herança compartilhada altera apresentação dos cursos, sem mudar seu catálogo. Corrigida classe h-13 inexistente, que resultava em CTAs estreitos; menu antes terminava em y=433 numa viewport de 375, agora tem limite dinâmico e rolagem interna.
+
 Revisão mobile-first: o hero anterior cortava o carro atrás do texto no celular; a camada de fundo no banner de cursos ocultava sua fotografia. Alteração restrita à apresentação da home: imagem própria abaixo do texto no celular e painel de fotografia ao lado/acima do CTA de cursos. Catálogo, preços e integrações não alterados. Prioridade de celular registrada por pedido explícito do usuário.
 
 2026-10-25 — verificação adicional via Edge headless confirmou cor escura do menu, fechamento por Escape, foco restaurado, ausência de overflow horizontal em celular/desktop e acesso ao catálogo. Build passou; screenshots locais gerados. Isso substitui a pendência funcional de navegador registrada abaixo, sem apagar a falha histórica da CUA.

@@ -1,5 +1,7 @@
 # Testes
 
+Revisão amarelo/dourado: TypeScript, 16 testes e build de 35 páginas aprovados. Edge headless confirmou cabeçalho rgb(255,193,5), alvos dos serviços de 44 px e ausência de overflow em 360/390/768/1440 px. Em 667×375, menu limitado a 375 px com rolagem e CTA alcançável. Execução final confirmou dois CTAs do hero com 48 px. Screenshot ux-gold-mobile.png capturado com movimento reduzido.
+
 Revisão mobile-first: TypeScript, 16 testes e build de 35 páginas passaram. Playwright/Edge: 360/390/768 px sem overflow e com todas as imagens visíveis carregadas; 1440 px com hero renderizado e sem overflow. Captura ux-home-390.png inspecionada. Captura completa de desktop com decodificação de todas as imagens não terminou; a checagem de desktop foi feita em execução separada e captura do topo.
 
 2026-10-25 — Edge headless/Playwright em produção local (porta 9022): painel móvel 390×844 visível com cor computada rgb(26,26,26); Escape fechou o painel e retornou foco ao botão. Sem overflow horizontal em 390 e 1440 px; catálogo abriu com título correto. Build de 35 páginas aprovado. Evidências visuais locais: mobile-ux-review.png e desktop-ux-review.png.

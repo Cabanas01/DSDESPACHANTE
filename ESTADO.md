@@ -32,7 +32,7 @@ Foi solicitado código de verificação para `Guicabanas13@gmail.com`; a Vercel 
 
 Após o login, a Vercel exibiu o modal obrigatório de decisão sobre 2FA. A criação da prévia está aguardando o usuário escolher configurar 2FA ou dispensar essa recomendação; essa decisão não foi tomada pelo agente.
 
-O commit local também permanece pendente porque o Git não possui identidade (`user.name` e `user.email`) configurada. As alterações estão isoladas e preparadas na branch `feat/ds-institutional-site`; nenhuma alteração foi enviada ao remoto.
+O commit local `78a67cd` foi criado com a identidade fornecida pelo usuário e permanece isolado na branch `feat/ds-institutional-site`. O push direto foi recusado porque o terminal está autenticado em outra conta GitHub; a conexão GitHub integrada também não tem permissão de escrita neste repositório.
 
 Prévia local disponível nesta sessão em `http://localhost:9015/`; ela não é pública e depende do processo local em execução.
 
@@ -47,3 +47,11 @@ Os 28 links de checkout Bludata do catálogo foram consultados somente em leitur
 No navegador de produção local, o filtro “Atualização”, o detalhe `mopp-atualizacao`, os links de inscrição e o retorno para `/cursos#cursos` foram validados.
 
 O script de lint legada do Next.js requer configuração interativa e não foi considerado aprovado; a migração para ESLint CLI permanece fora desta alteração por exigir dependência e regras novas.
+
+A Vercel foi autenticada na conta `cabanas01`, o aviso de 2FA foi dispensado a pedido do usuário e o projeto `dsdespachante` foi confirmado. A produção continua inalterada; a prévia depende apenas de autorização de escrita no GitHub para publicar a branch remota.
+
+Alternativa verificada: a Vercel CLI local não possui sessão (`loggedIn: false`) nem projeto vinculado. Ela não será usada para enviar uma prévia sem autenticação explícita; produção, domínio e DNS seguem inalterados.
+
+A credencial Git local da conta incorreta `dinheirodegraca013-spec` foi removida de forma direcionada. O Git Credential Manager agora não lista contas GitHub; a próxima ação é concluir o login interativo de `Cabanas01` e então publicar a branch de prévia. O conector GitHub do Codex permanece indisponível nesta sessão (erro `Unknown tool`).
+
+Tentativas de login/push iniciadas pelo Git Credential Manager ficaram presas sem abrir interface de autenticação; os processos pendentes foram encerrados, sem alterar arquivos, commits, domínio, DNS ou produção. O login deve ser concluído em um terminal visível pelo usuário com `git credential-manager github login --username Cabanas01 --browser`.

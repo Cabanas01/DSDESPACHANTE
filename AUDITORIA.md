@@ -18,7 +18,8 @@
 - A área de cursos preserva conteúdos promocionais e regulatórios já existentes no repositório. Esses dados não foram reescritos, pois precisam de confirmação da empresa antes de qualquer alteração editorial.
 - O sitemap estático inclui a página institucional, o catálogo e todas as 28 rotas de detalhes existentes no catálogo atual.
 - Rotas de detalhes são geradas para os 28 IDs do catálogo; IDs fora dessa lista retornam HTTP 404 e não são indexáveis.
-- A tentativa de commit foi interrompida antes de gravar histórico: o ambiente não possui identidade Git configurada. Não foi definida uma identidade arbitrária nem realizado push.
+- O commit local `78a67cd` foi criado na branch `feat/ds-institutional-site` com a identidade fornecida pelo usuário. O envio direto pelo terminal foi recusado porque as credenciais salvas pertencem à conta GitHub `dinheirodegraca013-spec`.
+- A conexão GitHub integrada identifica `Cabanas01`, mas retornou 403 ao tentar criar a branch remota: ela não possui permissão de escrita para este repositório.
 - Avatares remotos de demonstração e a métrica promocional não confirmada foram removidos da abertura dos cursos; catálogo, preços, IDs e links de inscrição não foram alterados.
 - A página oficial publicada foi consultada em 2026-10-24 como evidência de contato: Alameda das Tulipas, 214 - Jardim Primavera, Guarujá - SP; `(13) 99193-2590`; `contato@dscursos.online`. Esses dados são reutilizados somente nas áreas institucionais.
 - Teste automatizado confirma que os 28 cursos preservam imagens locais, checkout Bludata e links de WhatsApp do catálogo de origem.

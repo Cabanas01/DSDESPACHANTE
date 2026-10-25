@@ -15,7 +15,12 @@ export const metadata: Metadata = {
     description: "Atendimento em Santo Antônio, Guarujá. Transferência de veículo, licenciamento, CNH e recursos de multas.",
     images: [{ url: "/image/hero-car-guaruja.png", alt: "DS Despachante Guarujá" }],
   },
-  twitter: { card: "summary_large_image", title: "DS Despachante em Guarujá", images: ["/image/hero-car-guaruja.png"] },
+  twitter: {
+    card: "summary_large_image",
+    title: "DS Despachante em Guarujá | Documentação e CNH",
+    description: "Transferência, licenciamento, CRLV-e, CNH e recursos de multas em Santo Antônio, Guarujá.",
+    images: ["/image/hero-car-guaruja.png"],
+  },
 };
 
 const business = {
